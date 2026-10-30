@@ -846,11 +846,12 @@ html[dir="rtl"] .scroll-to-top-btn {
   gap: 1rem;
 }
 
-/* Global Quick Role Switcher Pill */
+/* Global Quick Role Switcher Pill (Placed cleanly on the bottom LEFT side) */
 .demo-role-badge-pill {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  left: 24px;
+  right: auto;
   z-index: 1050;
   background: var(--color-deep-navy);
   color: var(--color-white);
