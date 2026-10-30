@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgH" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#142B4A"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <linearGradient id="goldH" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#D6A84F"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background decorative arch -->
+  <rect x="0" y="0" width="600" height="450" rx="20" fill="url(#bgH)"/>
+  
+  <!-- Subtle Islamic Geometric Lattice in background -->
+  <g stroke="rgba(214, 168, 79, 0.15)" stroke-width="1.5" fill="none">
+    <circle cx="300" cy="225" r="180"/>
+    <circle cx="300" cy="225" r="140"/>
+    <circle cx="300" cy="225" r="90"/>
+    <polygon points="300,45 427,172 427,352 300,479 172,352 172,172"/>
+    <polygon points="427,225 352,352 172,352 100,225 172,97 352,97"/>
+  </g>
+
+  <!-- Grand Islamic Arch Silhouette -->
+  <path d="M 120 450 L 120 230 C 120 120, 240 70, 300 35 C 360 70, 480 120, 480 230 L 480 450 Z" 
+        fill="rgba(37, 99, 235, 0.25)" stroke="url(#goldH)" stroke-width="2.5"/>
+
+  <!-- Modern Education Floating Cards -->
+  <!-- Card 1: Quranic Studies & Hifz -->
+  <g transform="translate(60, 110)" filter="url(#softShadow)">
+    <rect width="160" height="90" rx="14" fill="#FFFFFF" fill-opacity="0.95"/>
+    <circle cx="35" cy="45" r="22" fill="#EFF6FF"/>
+    <path d="M 35 36 C 29 33, 21 34, 17 37 L 17 52 C 21 49, 29 48, 35 52 C 41 48, 49 49, 53 52 L 53 37 C 49 34, 41 33, 35 36 Z" fill="#2563EB"/>
+    <text x="68" y="40" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" fill="#142B4A">Quran &amp; Hifz</text>
+    <text x="68" y="55" font-family="'Poppins', sans-serif" font-size="10" fill="#64748B">Tajweed &amp; Hadith</text>
+    <text x="68" y="70" font-family="'Noto Naskh Arabic', serif" font-size="11" font-weight="600" fill="#D6A84F">حفظ القرآن الکریم</text>
+  </g>
+
+  <!-- Card 2: Modern Science & STEM -->
+  <g transform="translate(380, 100)" filter="url(#softShadow)">
+    <rect width="165" height="90" rx="14" fill="#FFFFFF" fill-opacity="0.95"/>
+    <circle cx="35" cy="45" r="22" fill="#FEF3C7"/>
+    <!-- Flask / Science -->
+    <path d="M 32 32 L 38 32 L 38 38 L 45 50 C 47 54, 43 58, 35 58 C 27 58, 23 54, 25 50 L 32 38 Z" fill="#D6A84F"/>
+    <text x="68" y="40" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" fill="#142B4A">Modern STEM</text>
+    <text x="68" y="55" font-family="'Poppins', sans-serif" font-size="10" fill="#64748B">Robotics &amp; Coding</text>
+    <text x="68" y="70" font-family="'Noto Naskh Arabic', serif" font-size="11" font-weight="600" fill="#2563EB">سائنس و ٹیکنالوجی</text>
+  </g>
+
+  <!-- Central Focal: The Book of Wisdom on Wooden Rehal / Stand -->
+  <g transform="translate(190, 170)" filter="url(#softShadow)">
+    <!-- Base Rehal Stand -->
+    <path d="M 60 210 L 110 160 L 160 210 L 130 220 L 110 190 L 90 220 Z" fill="#B45309" stroke="#78350F" stroke-width="2"/>
+    <path d="M 160 210 L 110 160 L 60 210 L 80 220 L 110 190 L 140 220 Z" fill="#92400E"/>
+    
+    <!-- Big Open Holy Book / Illuminated Manuscript -->
+    <path d="M 110 120 C 85 102, 35 106, 10 118 L 10 185 C 35 170, 85 170, 110 185 C 135 170, 185 170, 210 185 L 210 118 C 185 106, 135 102, 110 120 Z" 
+          fill="#FFFBEB" stroke="#D6A84F" stroke-width="3"/>
+    
+    <!-- Spine Line & Ribbon -->
+    <line x1="110" y1="120" x2="110" y2="185" stroke="#D6A84F" stroke-width="3"/>
+    <path d="M 110 185 L 110 210 L 116 204 L 122 210 L 122 185" fill="#DC2626"/>
+
+    <!-- Calligraphy Lines Simulation -->
+    <path d="M 25 135 Q 60 130 95 135 M 25 147 Q 60 142 95 147 M 25 159 Q 60 154 95 159" stroke="#D6A84F" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 125 135 Q 160 130 195 135 M 125 147 Q 160 142 195 147 M 125 159 Q 160 154 195 159" stroke="#D6A84F" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Central Radiance / Noor -->
+    <circle cx="110" cy="80" r="28" fill="url(#goldH)" opacity="0.85"/>
+    <polygon points="110,60 116,74 130,80 116,86 110,100 104,86 90,80 104,74" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Card 3: Character & Tarbiyah -->
+  <g transform="translate(70, 310)" filter="url(#softShadow)">
+    <rect width="170" height="85" rx="14" fill="#FFFFFF" fill-opacity="0.95"/>
+    <circle cx="35" cy="42" r="22" fill="#DCFCE7"/>
+    <!-- Shield / Morals -->
+    <path d="M 35 28 L 47 34 L 47 47 C 47 54, 35 59, 35 59 C 35 59, 23 54, 23 47 L 23 34 Z" fill="#16A34A"/>
+    <text x="68" y="38" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" fill="#142B4A">Moral Tarbiyah</text>
+    <text x="68" y="53" font-family="'Poppins', sans-serif" font-size="10" fill="#64748B">Sunnah &amp; Discipline</text>
+    <text x="68" y="68" font-family="'Noto Naskh Arabic', serif" font-size="11" font-weight="600" fill="#16A34A">تربیت و کردار سازی</text>
+  </g>
+
+  <!-- Card 4: ERP Cloud Management Badge -->
+  <g transform="translate(370, 305)" filter="url(#softShadow)">
+    <rect width="180" height="90" rx="14" fill="#FFFFFF" fill-opacity="0.95"/>
+    <circle cx="35" cy="45" r="22" fill="#E0E7FF"/>
+    <!-- Dashboard / Laptop -->
+    <rect x="23" y="34" width="24" height="16" rx="2" fill="#4338CA"/>
+    <rect x="20" y="50" width="30" height="3" rx="1.5" fill="#6366F1"/>
+    <text x="68" y="38" font-family="'Poppins', sans-serif" font-size="12" font-weight="700" fill="#142B4A">Smart Cloud ERP</text>
+    <text x="68" y="53" font-family="'Poppins', sans-serif" font-size="10" fill="#64748B">Admin • Teacher • Parent</text>
+    <text x="68" y="70" font-family="'Noto Naskh Arabic', serif" font-size="11" font-weight="600" fill="#4338CA">اسمارٹ اسکول مینجمنٹ</text>
+  </g>
+</svg>
+

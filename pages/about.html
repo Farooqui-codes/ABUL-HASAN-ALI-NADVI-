@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — SYED ABUL HASAN ALI NADWI</title>
+  
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#064E3B">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo/logo-mark.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg py-2">
+      <div class="container">
+        <a class="navbar-brand-wrap" href="../index.html">
+          <img src="../assets/logo/official-logo.png" alt="Jamia Abul Hasan Ali Nadwi Logo" height="52" class="me-2">
+          <div class="brand-title-wrap">
+            <span class="brand-title-urdu" style="font-size: 1.05rem;">جامعہ ابوالحسن علی ندوی</span>
+            <span class="brand-title-en" style="font-size: 0.75rem;">JAMIA ABUL HASAN ALI NADWI</span>
+          </div>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#publicNav">
+          <i class="fa-solid fa-bars fs-2 text-primary"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="publicNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html" data-i18n="navHome">Home</a>
+            </li>
+
+            <!-- About Us Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="navAbout">
+                About Us
+              </a>
+              <ul class="dropdown-menu animate-fade-in-down" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item active" href="about.html"><i class="fa-solid fa-school me-2"></i> About &amp; Philosophy</a></li>
+                <li><a class="dropdown-item " href="faculty.html"><i class="fa-solid fa-chalkboard-user me-2"></i> Faculty &amp; Asatizah</a></li>
+                <li><a class="dropdown-item " href="facilities.html"><i class="fa-solid fa-building me-2"></i> Campus &amp; Facilities</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="academics.html" data-i18n="navAcademics">Academics</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="admissions.html" data-i18n="navAdmissions">Admissions</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="contact.html" data-i18n="navContact">Contact</a>
+            </li>
+
+            <!-- Controls: Language & Theme Side by Side in 1 Clean Row -->
+            <li class="nav-item ms-lg-3 my-2 my-lg-0">
+              <div class="site-nav-controls">
+                <!-- Language Switcher -->
+                <button class="lang-toggle-btn" onclick="window.NadwiLang.toggle()" title="Switch Language / زبان تبدیل کریں">
+                  <i class="fa-solid fa-globe"></i> <span id="langBtnText">اردو</span>
+                </button>
+
+                <!-- Dark / Light Theme Toggle -->
+                <button class="theme-toggle-btn" onclick="window.NadwiUI.toggleTheme()" title="Toggle Dark/Light Mode">
+                  <i id="themeToggleIcon" class="fa-solid fa-moon"></i>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-5" style="background: linear-gradient(135deg, #142B4A 0%, #1E3A8A 100%); color: #FFF;">
+    <div class="container text-center py-3">
+      <span class="badge-nadwi badge-gold mb-2">ABOUT OUR INSTITUTION</span>
+      <h1 class="display-5 fw-bold text-white mb-2" data-i18n="navAbout">About School</h1>
+      <div class="font-urdu text-gold fs-4">جامعہ ابوالحسن علی ندوی (ربانی فاؤنڈیشن مارول)</div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="section-tag">HERITAGE OF WISDOM</span>
+          <h2 class="section-title">Named After a Luminary of Islamic Thought</h2>
+          <p class="text-secondary lead">
+            Operating under <strong>Rabbani Foundation Marul</strong>, Jamia Abul Hasan Ali Nadwi is dedicated to providing high-quality foundational Islamic education and contemporary primary schooling for young boys.
+          </p>
+          <p class="text-secondary">
+            Our academy currently caters from <strong>Nursery, LKG, UKG up to 4th Standard</strong>. We lay a strong bedrock of Noorani Qaida, Tajweed, basic Arabic, English phonics, mental math, and Sunnah etiquette. Higher grade levels (5th to 10th Standard) are scheduled for gradual expansion in future development phases.
+          </p>
+          <div class="d-flex gap-3 flex-wrap mt-4">
+            <div class="badge-nadwi badge-blue p-2 px-3"><i class="fa-solid fa-circle-check text-primary me-1"></i> Nursery to 4th Standard Active</div>
+            <div class="badge-nadwi badge-gold p-2 px-3"><i class="fa-solid fa-circle-check text-warning me-1"></i> Under Rabbani Foundation Marul</div>
+            <div class="badge-nadwi badge-success p-2 px-3"><i class="fa-solid fa-circle-check text-success me-1"></i> Dedicated Boys Primary Wing</div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center mt-4 mt-lg-0" data-aos="fade-left">
+          <img src="../assets/images/campus-building.svg" alt="School Campus" class="img-fluid rounded shadow-lg" style="max-height: 380px;">
+        </div>
+      </div>
+
+      <!-- Vision & Mission Cards -->
+      <div class="row g-4 my-4">
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="feature-card">
+            <div class="feature-icon-wrap" style="background:#ECFDF5; color:#0F5132;">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <h3 class="feature-title">Our Vision</h3>
+            <p class="feature-desc">
+              To produce intellectually formidable, spiritually grounded Muslim youth who lead with upright moral integrity, excel at top universities, and serve humanity in accordance with divine prophetic guidance.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card">
+            <div class="feature-icon-wrap" style="background:#FEF3C7; color:#B45309;">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <h3 class="feature-title">Our Mission</h3>
+            <p class="feature-desc">
+              To deliver an uncompromisingly high standard of academic education harmonized with thorough memorization and understanding of the Holy Quran, Sunnah manners, Arabic fluency, and modern technical competence.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Institutional History Timeline -->
+      <div class="mt-5 pt-3" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">OUR JOURNEY</span>
+          <h2 class="section-title">Milestones of Academic Growth</h2>
+          <p class="section-subtitle">Over two decades of dedicated service in Islamic and modern education.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="feature-card text-center">
+              <h4 class="text-primary fw-bold">1998</h4>
+              <h5 class="fw-bold text-navy">Foundation Stone</h5>
+              <p class="text-secondary small">Founded with an initial cohort of 40 students dedicated to Hifz-ul-Quran and primary education under scholarly patronage.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card text-center">
+              <h4 class="text-primary fw-bold">2010</h4>
+              <h5 class="fw-bold text-navy">STEM Block &amp; Labs</h5>
+              <p class="text-secondary small">Inauguration of modern physics, chemistry, and digital computer laboratories alongside secondary board affiliations.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card text-center">
+              <h4 class="text-primary fw-bold">2026</h4>
+              <h5 class="fw-bold text-navy">Smart Cloud ERP Launch</h5>
+              <p class="text-secondary small">Digital transformation with four comprehensive role-based dashboards, bilingual English/Urdu support, and real-time parent portal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p class="mb-1">&copy; 2026 <strong>SYED ABUL HASAN ALI NADWI</strong>. <span data-i18n="allRightsReserved">All Rights Reserved.</span></p>
+      <small class="text-muted">Strict Islamic Boys School Demo Data Policy Compliant.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/language.js"></script>
+  <script src="../js/interactions.js"></script>
+  <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
+

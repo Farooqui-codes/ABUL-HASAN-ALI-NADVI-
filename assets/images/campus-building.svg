@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <linearGradient id="bldgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#142B4A"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="350" rx="16" fill="url(#skyGrad)"/>
+  <!-- Islamic Arch and Main Campus Building -->
+  <!-- Lawn -->
+  <path d="M 0 280 Q 250 250 500 280 L 500 350 L 0 350 Z" fill="#15803D"/>
+  <path d="M 0 300 Q 250 280 500 300 L 500 350 L 0 350 Z" fill="#16A34A"/>
+  
+  <!-- Left Minaret Tower -->
+  <rect x="70" y="100" width="30" height="180" fill="url(#bldgGrad)"/>
+  <path d="M 65 100 L 85 50 L 105 100 Z" fill="#D6A84F"/>
+  <circle cx="85" cy="45" r="4" fill="#D6A84F"/>
+  <rect x="80" y="120" width="10" height="20" rx="5" fill="#FEF08A"/>
+  <rect x="80" y="160" width="10" height="20" rx="5" fill="#FEF08A"/>
+  <rect x="80" y="200" width="10" height="20" rx="5" fill="#FEF08A"/>
+
+  <!-- Right Minaret Tower -->
+  <rect x="400" y="100" width="30" height="180" fill="url(#bldgGrad)"/>
+  <path d="M 395 100 L 415 50 L 435 100 Z" fill="#D6A84F"/>
+  <circle cx="415" cy="45" r="4" fill="#D6A84F"/>
+  <rect x="410" y="120" width="10" height="20" rx="5" fill="#FEF08A"/>
+  <rect x="410" y="160" width="10" height="20" rx="5" fill="#FEF08A"/>
+  <rect x="410" y="200" width="10" height="20" rx="5" fill="#FEF08A"/>
+
+  <!-- Main Academic Block -->
+  <rect x="110" y="140" width="280" height="140" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  
+  <!-- Central Grand Dome -->
+  <path d="M 200 140 C 200 80, 300 80, 300 140 Z" fill="#D6A84F"/>
+  <circle cx="250" cy="70" r="5" fill="#D6A84F"/>
+  <line x1="250" y1="70" x2="250" y2="55" stroke="#D6A84F" stroke-width="2"/>
+  <path d="M 248 55 A 4 4 0 1 1 254 50" fill="none" stroke="#D6A84F" stroke-width="2"/>
+
+  <!-- Grand Arched Entrance -->
+  <path d="M 215 280 L 215 200 C 215 170, 285 170, 285 200 L 285 280 Z" fill="url(#bldgGrad)"/>
+  <path d="M 230 280 L 230 220 C 230 205, 270 205, 270 220 L 270 280 Z" fill="#D6A84F"/>
+
+  <!-- Windows Grid -->
+  <g fill="#93C5FD">
+    <rect x="130" y="165" width="22" height="30" rx="3"/>
+    <rect x="165" y="165" width="22" height="30" rx="3"/>
+    <rect x="315" y="165" width="22" height="30" rx="3"/>
+    <rect x="350" y="165" width="22" height="30" rx="3"/>
+    
+    <rect x="130" y="215" width="22" height="30" rx="3"/>
+    <rect x="165" y="215" width="22" height="30" rx="3"/>
+    <rect x="315" y="215" width="22" height="30" rx="3"/>
+    <rect x="350" y="215" width="22" height="30" rx="3"/>
+  </g>
+
+  <!-- Pathway -->
+  <polygon points="215,280 285,280 320,350 180,350" fill="#E2E8F0"/>
+
+  <!-- School Name Plaque -->
+  <rect x="160" y="148" width="180" height="15" rx="3" fill="#142B4A"/>
+  <text x="250" y="159" font-family="'Poppins', sans-serif" font-size="8" font-weight="700" fill="#D6A84F" text-anchor="middle">
+    SYED ABUL HASAN ALI NADWI CAMPUS
+  </text>
+</svg>
+

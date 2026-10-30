@@ -1,0 +1,320 @@
+/* ==========================================================================
+   JAMIA ABUL HASAN ALI NADWI — PREMIUM ISLAMIC SCHOOL ERP
+   Responsive Stylesheet (css/responsive.css)
+   ========================================================================== */
+
+/* Laptop & Medium Desktop Screen Optimization (Prevents Navbar Wrapping) */
+@media (min-width: 992px) and (max-width: 1360px) {
+  .site-header .container {
+    max-width: 100% !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 0.82rem !important;
+    padding: 0.4rem 0.45rem !important;
+  }
+
+  .brand-title-urdu {
+    font-size: 1.05rem;
+  }
+
+  .brand-title-en {
+    font-size: 0.72rem;
+  }
+
+  .brand-title-sub {
+    font-size: 0.6rem;
+  }
+
+  .nav-actions-group {
+    gap: 0.35rem;
+  }
+
+  .lang-toggle-btn {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.78rem;
+  }
+
+  .theme-toggle-btn {
+    width: 38px !important;
+    min-width: 38px !important;
+    height: 38px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+  }
+
+  .btn-nadwi-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-urdu-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablet & Mobile Screens (< 992px) */
+@media (max-width: 991px) {
+  /* Public Header & Mobile Navbar Drawer */
+  .site-header {
+    padding: 0.35rem 0;
+  }
+
+  .navbar-toggler {
+    padding: 0.4rem 0.65rem;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--color-border);
+    background: var(--color-bg);
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(15, 81, 50, 0.15);
+  }
+
+  [data-theme="dark"] .navbar-toggler {
+    background: #14243D;
+    border-color: #1E2E4A;
+  }
+
+  .site-header .navbar-collapse {
+    background: #FFFFFF;
+    padding: 1.25rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
+    margin-top: 0.85rem;
+    border: 1px solid var(--color-border);
+  }
+
+  [data-theme="dark"] .site-header .navbar-collapse {
+    background: #0F1D33;
+    border-color: #1E2E4A;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar-nav {
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 0.85rem;
+  }
+
+  [data-theme="dark"] .navbar-nav {
+    border-bottom-color: #1E2E4A;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.65rem 0.75rem !important;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    background: var(--color-light-blue);
+  }
+
+  [data-theme="dark"] .navbar-nav .nav-link:hover,
+  [data-theme="dark"] .navbar-nav .nav-link.active {
+    background: #14243D;
+  }
+
+  .navbar-nav .nav-link::after {
+    display: none;
+  }
+
+  /* Mobile Nav Controls: Keep Language & Theme strictly in one clean horizontal row */
+  .navbar-nav .nav-item:last-child {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-border);
+    margin-top: 0.5rem;
+  }
+
+  [data-theme="dark"] .navbar-nav .nav-item:last-child {
+    border-top-color: #1E2E4A;
+  }
+
+  /* Hero Section Mobile */
+  .hero-section {
+    padding: 3rem 0 2.5rem;
+    text-align: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-image-wrap {
+    margin-top: 2rem;
+  }
+
+  /* Dashboard Sidebar Mobile Off-canvas */
+  .dashboard-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -285px;
+    z-index: 1060;
+    box-shadow: 10px 0 25px rgba(0, 0, 0, 0.4);
+    transition: transform var(--transition-normal);
+  }
+
+  html[dir="rtl"] .dashboard-sidebar {
+    left: auto;
+    right: -285px;
+  }
+
+  .dashboard-sidebar.mobile-open {
+    transform: translateX(285px);
+  }
+
+  html[dir="rtl"] .dashboard-sidebar.mobile-open {
+    transform: translateX(-285px);
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex !important;
+  }
+
+  .topbar-search-form {
+    display: none;
+  }
+
+  .stat-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Scroll to top button mobile position */
+  .scroll-to-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  html[dir="rtl"] .scroll-to-top-btn {
+    right: auto;
+    left: 20px;
+  }
+}
+
+/* Phones (< 768px) */
+@media (max-width: 767px) {
+  .top-notice-strip {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .navbar-brand-wrap img {
+    height: 42px;
+  }
+
+  .brand-title-urdu {
+    font-size: 1rem;
+  }
+
+  .brand-title-en {
+    font-size: 0.72rem;
+  }
+
+  .brand-title-sub,
+  .brand-title-wrap small {
+    display: none !important;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-urdu-title {
+    font-size: 1.45rem;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+  }
+
+  .stat-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-content-body {
+    padding: 1rem 0.75rem;
+  }
+
+  .dashboard-welcome-banner {
+    padding: 1.25rem 1rem;
+  }
+
+  .banner-main-title {
+    font-size: 1.25rem;
+  }
+
+  .banner-urdu-greeting {
+    font-size: 1.1rem;
+  }
+
+  .dash-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .topbar-user-details {
+    display: none;
+  }
+
+  .topbar-right {
+    gap: 0.4rem;
+  }
+
+  .certificate-container {
+    padding: 1.5rem 0.85rem;
+  }
+
+  .cert-school-name-en {
+    font-size: 1.15rem;
+  }
+
+  .cert-school-name-ur {
+    font-size: 1.15rem;
+  }
+
+  .cert-body-text {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .cert-signatures {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .demo-role-badge-pill {
+    bottom: 10px;
+    right: 10px;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.75rem;
+  }
+
+  .stats-bar-section .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+}

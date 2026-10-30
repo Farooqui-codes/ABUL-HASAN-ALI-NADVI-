@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Portal — SYED ABUL HASAN ALI NADWI</title>
+  
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#064E3B">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo/logo-mark.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <div class="dashboard-app-wrap">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+      <div class="sidebar-header">
+        <a href="teacher.html" class="sidebar-brand">
+          <img src="../assets/logo/official-logo.png" alt="Logo" class="sidebar-brand-logo rounded-circle bg-white p-1">
+          <div class="sidebar-brand-text">
+            <span class="sidebar-brand-urdu">جامعہ ابوالحسن علی ندوی</span>
+            <span class="sidebar-brand-en">FACULTY • MARUL</span>
+          </div>
+        </a>
+        <button type="button" class="sidebar-collapse-btn d-none d-lg-block" id="sidebarCollapseBtn">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-role-indicator">
+        <span class="role-tag teacher"><i class="fa-solid fa-user-tie me-1"></i> FACULTY</span>
+        <span class="badge-nadwi badge-gold small">DEMO DATA</span>
+      </div>
+
+      <ul class="sidebar-nav-list">
+        <li class="menu-category-title">Teaching Dashboard</li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link active" data-module="dashboard">
+            <i class="fa-solid fa-gauge-high"></i>
+            <span class="nav-label" data-i18n="dashOverview">Overview</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="attendance">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span class="nav-label">Class Attendance</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="homework">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <span class="nav-label">Homework Manager</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="marks">
+            <i class="fa-solid fa-pen"></i>
+            <span class="nav-label">Marks Entry</span>
+          </a>
+        </li>
+
+        <li class="menu-category-title">Academic Resources</li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="materials">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span class="nav-label">Study Materials</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="communication">
+            <i class="fa-solid fa-comments"></i>
+            <span class="nav-label">Parent Communication</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="leave">
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <span class="nav-label">Leave Application</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-user-footer">
+        <div class="sidebar-user-footer-row">
+          <img src="../assets/avatars/male-teacher-1.svg" alt="Teacher Avatar" class="sidebar-user-avatar">
+          <div class="sidebar-user-info">
+          <span class="sidebar-user-name">Maulana Abdul Rahman</span>
+          <span class="sidebar-user-role">Vice Principal &amp; Senior Alim</span>
+        </div>
+        </div>
+        <button class="sidebar-pwa-btn" onclick="window.installPWA()">
+          <i class="fa-solid fa-laptop-arrow-down me-1"></i> Install Desktop App
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="breadcrumb-wrap d-none d-sm-flex">
+            <a href="teacher.html"><i class="fa-solid fa-user-tie me-1"></i> Faculty Portal</a>
+            <span>/</span>
+            <span class="current-crumb" id="teacherBreadcrumbCurrent">Overview</span>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="lang-toggle-btn" onclick="window.NadwiLang.toggle()" title="Switch Language / زبان تبدیل کریں">
+                <i class="fa-solid fa-globe"></i> <span id="langBtnText">اردو</span>
+          </button>
+          <button class="theme-toggle-btn topbar-btn" onclick="window.NadwiUI.toggleTheme()" title="Toggle Dark/Light Mode">
+                <i id="themeToggleIcon" class="fa-solid fa-moon"></i> <span id="themeBtnLabel" class="d-none d-sm-inline ms-1 small">Theme</span>
+              </button>
+
+          <div class="dropdown">
+            <div class="topbar-user-pill" data-bs-toggle="dropdown">
+              <img src="../assets/avatars/male-teacher-1.svg" alt="Teacher">
+              <div class="topbar-user-details">
+                <span class="topbar-user-name">Maulana Abdul Rahman</span>
+                <span class="topbar-user-role-text">Senior Faculty</span>
+              </div>
+              <i class="fa-solid fa-chevron-down small text-muted"></i>
+            </div>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg">
+              <li><a class="dropdown-item" href="../index.html"><i class="fa-solid fa-house me-2"></i> School Homepage</a></li>
+              <li><a class="dropdown-item" href="admin.html"><i class="fa-solid fa-shield-halved me-2"></i> Admin Portal</a></li>
+              <li><a class="dropdown-item" href="student.html"><i class="fa-solid fa-graduation-cap me-2"></i> Student Portal</a></li>
+              <li><a class="dropdown-item" href="parent.html"><i class="fa-solid fa-users me-2"></i> Parent Portal</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger fw-bold" href="#" onclick="window.NadwiAuth.logout(); return false;"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i> Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-content-body">
+        
+        <!-- MODULE: DASHBOARD OVERVIEW -->
+        <section class="erp-module-section active" id="mod-dashboard">
+          <div class="dashboard-welcome-banner animate-fade-in-down">
+            <div class="banner-urdu-greeting">حياكم الله — خوش آمدید استاد محترم</div>
+            <h2 class="banner-main-title">As-salamu alaykum, Maulana Abdul Rahman</h2>
+            <p class="banner-subtitle mb-0">Your teaching schedule, attendance management, homework records, and parent consultations.</p>
+          </div>
+
+          <div class="stat-cards-grid animate-fade-in-up">
+            <div class="dash-stat-card">
+              <div class="stat-card-info">
+                <p>Assigned Classes</p>
+                <h3>2 Classes</h3>
+                <span class="stat-card-trend"><i class="fa-solid fa-school"></i> Grade 10 &amp; Grade 9</span>
+              </div>
+              <div class="stat-card-icon-box blue"><i class="fa-solid fa-graduation-cap"></i></div>
+            </div>
+
+            <div class="dash-stat-card green">
+              <div class="stat-card-info">
+                <p>Assigned Students</p>
+                <h3>90 Students</h3>
+                <span class="stat-card-trend up"><i class="fa-solid fa-circle-check"></i> 100% Boys</span>
+              </div>
+              <div class="stat-card-icon-box green"><i class="fa-solid fa-users"></i></div>
+            </div>
+
+            <div class="dash-stat-card gold">
+              <div class="stat-card-info">
+                <p>Today's Lectures</p>
+                <h3>4 Periods</h3>
+                <span class="stat-card-trend"><i class="fa-solid fa-clock-rotate-left"></i> Quranic Tafseer &amp; Nahw</span>
+              </div>
+              <div class="stat-card-icon-box gold"><i class="fa-solid fa-book"></i></div>
+            </div>
+
+            <div class="dash-stat-card purple">
+              <div class="stat-card-info">
+                <p>Pending Submissions</p>
+                <h3>8 Homeworks</h3>
+                <span class="stat-card-trend down"><i class="fa-solid fa-bell"></i> Need Review</span>
+              </div>
+              <div class="stat-card-icon-box purple"><i class="fa-solid fa-book"></i></div>
+            </div>
+          </div>
+
+          <!-- Schedule & Quick Actions -->
+          <div class="row g-4 mb-4">
+            <div class="col-lg-6">
+              <div class="dash-card h-100">
+                <div class="dash-card-header">
+                  <h5 class="dash-card-title mb-0"><i class="fa-solid fa-calendar-day text-primary"></i> Today's Lecture Schedule</h5>
+                </div>
+                <div class="dash-card-body p-0">
+                  <div class="table-responsive-nadwi">
+                    <table class="table-nadwi">
+                      <thead>
+                        <tr><th>Period</th><th>Time</th><th>Class</th><th>Subject</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>Period 1</td><td>08:30 - 09:15</td><td>Class 4</td><td>Quranic Nazira &amp; Tajweed</td></tr>
+                        <tr><td>Period 2</td><td>09:15 - 10:00</td><td>Class 3</td><td>Noorani Qaida &amp; Duas</td></tr>
+                        <tr><td>Period 3</td><td>10:15 - 11:00</td><td>Class 2</td><td>Basic Arabic Words</td></tr>
+                        <tr><td>Period 4</td><td>11:00 - 11:45</td><td>Class 1</td><td>Quranic Alphabet &amp; Adab</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="dash-card h-100">
+                <div class="dash-card-header">
+                  <h5 class="dash-card-title mb-0"><i class="fa-solid fa-pen-to-square text-warning"></i> Quick Homework Creator</h5>
+                </div>
+                <div class="dash-card-body">
+                  <form id="addHomeworkForm">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="form-group-nadwi">
+                          <label class="form-label-nadwi">Target Class</label>
+                          <select id="hwClass" class="form-control-nadwi">
+                            <option>Class 4</option>
+                            <option>Class 3</option>
+                            <option>Class 2</option>
+                            <option>Class 1</option>
+                            <option>UKG</option>
+                            <option>LKG</option>
+                            <option>Nursery</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-group-nadwi">
+                          <label class="form-label-nadwi">Subject</label>
+                          <input type="text" id="hwSubject" class="form-control-nadwi" value="Quranic Tafseer" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-8">
+                        <div class="form-group-nadwi">
+                          <label class="form-label-nadwi">Homework Title</label>
+                          <input type="text" id="hwTitle" class="form-control-nadwi" placeholder="e.g., Memorize Surah Luqman Ayat 1-8" required>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="form-group-nadwi">
+                          <label class="form-label-nadwi">Due Date</label>
+                          <input type="date" id="hwDueDate" class="form-control-nadwi" value="2026-11-04" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group-nadwi">
+                      <label class="form-label-nadwi">Instructions</label>
+                      <textarea id="hwDesc" class="form-control-nadwi" rows="2" placeholder="Specific guidelines for boys to follow..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-nadwi btn-nadwi-primary w-100">
+                      <i class="fa-solid fa-paper-plane me-1"></i> Assign to Class
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MODULE: ATTENDANCE -->
+        <section class="erp-module-section" id="mod-attendance">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-calendar-check text-primary"></i> Daily Student Attendance Marking (Class 4)</h4>
+              <span class="badge-nadwi badge-gold">Date: 30 October 2026</span>
+            </div>
+            <div class="table-responsive-nadwi">
+              <table class="table-nadwi">
+                <thead>
+                  <tr>
+                    <th>Roll #</th>
+                    <th>Student Name</th>
+                    <th>Class</th>
+                    <th>Attendance Metric</th>
+                    <th>One-Click Status</th>
+                  </tr>
+                </thead>
+                <tbody id="teacherStudentsTableBody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- MODULE: HOMEWORK -->
+        <section class="erp-module-section" id="mod-homework">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-book text-primary"></i> Active Homework Assignments</h4>
+            </div>
+            <div class="dash-card-body" id="teacherHomeworkList">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </section>
+
+        <!-- MODULE: MARKS ENTRY -->
+        <section class="erp-module-section" id="mod-marks">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-pen text-primary"></i> Assessment Marks Entry (Mid-Term)</h4>
+              <span class="badge-nadwi badge-blue">Subject: Quran Nazira, English &amp; Math</span>
+            </div>
+            <div class="table-responsive-nadwi">
+              <table class="table-nadwi">
+                <thead>
+                  <tr>
+                    <th>Roll</th>
+                    <th>Student Name</th>
+                    <th>Quran Nazira (100)</th>
+                    <th>English (100)</th>
+                    <th>Mathematics (100)</th>
+                    <th>Grade Status</th>
+                  </tr>
+                </thead>
+                <tbody id="teacherMarksTableBody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- MODULE: STUDY MATERIALS -->
+        <section class="erp-module-section" id="mod-materials">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-file-pdf text-danger"></i> Digital Course Notes &amp; PDF Repository</h4>
+            </div>
+            <div class="dash-card-body">
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="p-3 border rounded bg-light">
+                    <i class="fa-solid fa-file-pdf text-danger fs-1 mb-2 d-block"></i>
+                    <h6 class="fw-bold text-navy mb-1">Tafseer Surah Al-Hujurat Notes.pdf</h6>
+                    <small class="text-muted d-block mb-2">Grade 10 • 2.4 MB • Uploaded Oct 24</small>
+                    <button class="btn btn-sm btn-outline-primary" onclick="window.NadwiUI.toast('Downloaded lesson notes demo.')">Download</button>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-3 border rounded bg-light">
+                    <i class="fa-solid fa-file-pdf text-danger fs-1 mb-2 d-block"></i>
+                    <h6 class="fw-bold text-navy mb-1">Nahw Rules Chart (Jumlah Fi'liyyah).pdf</h6>
+                    <small class="text-muted d-block mb-2">Grade 9 • 1.8 MB • Uploaded Oct 20</small>
+                    <button class="btn btn-sm btn-outline-primary" onclick="window.NadwiUI.toast('Downloaded lesson notes demo.')">Download</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MODULE: COMMUNICATION -->
+        <section class="erp-module-section" id="mod-communication">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-comments text-primary"></i> Parent Consultation Messenger</h4>
+            </div>
+            <div class="dash-card-body">
+              <div class="p-3 border rounded bg-light mb-3" id="teacherChatHistory" style="height: 220px; overflow-y: auto;">
+                <div class="d-flex mb-3">
+                  <div class="p-3 rounded bg-white border" style="max-width: 75%;">
+                    <div class="small fw-bold text-navy mb-1">From: Ibrahim Khan (Father of M. Abdullah)</div>
+                    <div>As-salamu alaykum Maulana. Abdullah has completed his Quran revision for Juz 15. Please review his fluency tomorrow.</div>
+                    <small class="text-muted d-block text-end mt-1">Yesterday, 5:15 PM</small>
+                  </div>
+                </div>
+              </div>
+
+              <form id="teacherMsgForm">
+                <div class="row g-2">
+                  <div class="col-md-4">
+                    <select id="msgParentSelect" class="form-control-nadwi">
+                      <option>Ibrahim Khan (Father of M. Abdullah)</option>
+                      <option>Muhammad Farooq (Father of Ahmed Raza)</option>
+                      <option>Abdul Hadi (Father of Abdul Rahman)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" id="msgText" class="form-control-nadwi" placeholder="Type message to parent..." required value="Wa alaykum as-salam. MashaAllah, I will listen to his recitation in the first period.">
+                  </div>
+                  <div class="col-md-2">
+                    <button type="submit" class="btn-nadwi btn-nadwi-primary w-100">Send</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- MODULE: LEAVE REQUEST -->
+        <section class="erp-module-section" id="mod-leave">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-envelope-open-text text-warning"></i> Faculty Leave Application</h4>
+            </div>
+            <div class="dash-card-body">
+              <form id="teacherLeaveForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group-nadwi">
+                      <label class="form-label-nadwi">Leave Type *</label>
+                      <select class="form-control-nadwi" required>
+                        <option>Casual Leave</option>
+                        <option>Medical Leave</option>
+                        <option>Hajj / Umrah Leave</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group-nadwi">
+                      <label class="form-label-nadwi">From Date *</label>
+                      <input type="date" class="form-control-nadwi" required value="2026-11-10">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group-nadwi">
+                      <label class="form-label-nadwi">To Date *</label>
+                      <input type="date" class="form-control-nadwi" required value="2026-11-12">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group-nadwi">
+                  <label class="form-label-nadwi">Reason for Leave *</label>
+                  <textarea class="form-control-nadwi" rows="3" required placeholder="Enter reasons for requested leave..."></textarea>
+                </div>
+                <button type="submit" class="btn-nadwi btn-nadwi-primary">Submit Application to Principal</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/language.js"></script>
+  <script src="../js/interactions.js"></script>
+  <script src="../js/teacher.js"></script>
+</body>
+</html>
+

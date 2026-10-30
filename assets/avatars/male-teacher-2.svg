@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgTeacher2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="url(#bgTeacher2)" stroke="#D6A84F" stroke-width="2.5"/>
+  <!-- Science/Math Male Teacher in Blazer & Tie -->
+  <path d="M 22 112 C 24 88, 40 80, 60 80 C 80 80, 96 88, 98 112 Z" fill="#1E293B"/>
+  <path d="M 48 80 L 60 94 L 72 80 Z" fill="#FFFFFF"/>
+  <path d="M 58 94 L 62 94 L 63 112 L 57 112 Z" fill="#DC2626"/>
+  <!-- Neck -->
+  <rect x="52" y="66" width="16" height="16" rx="4" fill="#EAB690"/>
+  <!-- Head -->
+  <ellipse cx="60" cy="52" rx="19" ry="22" fill="#EAB690"/>
+  <!-- Hair & Trimmed short beard -->
+  <path d="M 41 46 C 41 26, 79 26, 79 46 C 74 32, 46 32, 41 46 Z" fill="#1E293B"/>
+  <path d="M 46 54 C 48 70, 72 70, 74 54 C 72 63, 48 63, 46 54 Z" fill="#1E293B"/>
+  <!-- Eyes & specs -->
+  <circle cx="53" cy="48" r="5" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+  <circle cx="67" cy="48" r="5" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+  <line x1="58" y1="48" x2="62" y2="48" stroke="#1E293B" stroke-width="1.5"/>
+</svg>
+

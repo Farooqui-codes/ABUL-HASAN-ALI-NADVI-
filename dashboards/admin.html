@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — SYED ABUL HASAN ALI NADWI</title>
+  
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#064E3B">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo/logo-mark.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <div class="dashboard-app-wrap">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+      <!-- Header -->
+      <div class="sidebar-header">
+        <a href="admin.html" class="sidebar-brand">
+          <img src="../assets/logo/official-logo.png" alt="Logo" class="sidebar-brand-logo rounded-circle bg-white p-1">
+          <div class="sidebar-brand-text">
+            <span class="sidebar-brand-urdu">جامعہ ابوالحسن علی ندوی</span>
+            <span class="sidebar-brand-en">JAMIA NADWI • MARUL</span>
+          </div>
+        </a>
+        <button type="button" class="sidebar-collapse-btn d-none d-lg-block" id="sidebarCollapseBtn" title="Collapse Sidebar">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+
+      <!-- Role Indicator -->
+      <div class="sidebar-role-indicator">
+        <span class="role-tag admin"><i class="fa-solid fa-shield-halved me-1"></i> ADMIN</span>
+        <span class="badge-nadwi badge-gold small">DEMO DATA</span>
+      </div>
+
+      <!-- Nav Links -->
+      <ul class="sidebar-nav-list">
+        <li class="menu-category-title">Core Modules</li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link active" data-module="dashboard">
+            <i class="fa-solid fa-gauge-high"></i>
+            <span class="nav-label" data-i18n="dashOverview">Dashboard Overview</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="students">
+            <i class="fa-solid fa-users"></i>
+            <span class="nav-label" data-i18n="modStudents">Student Management</span>
+            <span class="nav-badge">12+</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="teachers">
+            <i class="fa-solid fa-user-tie"></i>
+            <span class="nav-label" data-i18n="modTeachers">Teacher Faculty</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="classes">
+            <i class="fa-solid fa-school"></i>
+            <span class="nav-label" data-i18n="modClasses">Class Management</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="attendance">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span class="nav-label" data-i18n="modAttendance">Attendance System</span>
+          </a>
+        </li>
+
+        <li class="menu-category-title">Accounts &amp; Academics</li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="fees">
+            <i class="fa-solid fa-money-bill-wave"></i>
+            <span class="nav-label" data-i18n="modFees">Fee &amp; Accounts</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="certificates">
+            <i class="fa-solid fa-award"></i>
+            <span class="nav-label" data-i18n="modCertificates">Certificates &amp; ID</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="timetable">
+            <i class="fa-solid fa-table-list"></i>
+            <span class="nav-label" data-i18n="modTimetable">Timetable Schedule</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="library">
+            <i class="fa-solid fa-book-open"></i>
+            <span class="nav-label" data-i18n="modLibrary">Library Catalog</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="transport">
+            <i class="fa-solid fa-bus"></i>
+            <span class="nav-label" data-i18n="modTransport">Transport Management</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="notices">
+            <i class="fa-solid fa-bullhorn"></i>
+            <span class="nav-label" data-i18n="recentNotices">Notices &amp; Circulars</span>
+          </a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="sidebar-nav-link" data-module="settings">
+            <i class="fa-solid fa-gear"></i>
+            <span class="nav-label" data-i18n="modSettings">School Settings</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Footer User Info -->
+      <div class="sidebar-user-footer">
+        <div class="sidebar-user-footer-row">
+          <img src="../assets/avatars/male-admin.svg" alt="Admin Avatar" class="sidebar-user-avatar">
+          <div class="sidebar-user-info">
+          <span class="sidebar-user-name">Dr. Muhammad Usman</span>
+          <span class="sidebar-user-role">Super Administrator</span>
+        </div>
+        </div>
+        <button class="sidebar-pwa-btn" onclick="window.installPWA()">
+          <i class="fa-solid fa-laptop-arrow-down me-1"></i> Install Desktop App
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <!-- Topbar -->
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="breadcrumb-wrap d-none d-sm-flex">
+            <a href="admin.html"><i class="fa-solid fa-house me-1"></i> Admin Portal</a>
+            <span>/</span>
+            <span class="current-crumb" id="adminBreadcrumbCurrent">Dashboard Overview</span>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Search Form -->
+          <div class="topbar-search-form d-none d-md-block">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search student or teacher..." onkeyup="filterStudents()">
+          </div>
+
+          <!-- Language Switcher -->
+          <button class="lang-toggle-btn" onclick="window.NadwiLang.toggle()" title="Switch Language / زبان تبدیل کریں">
+                <i class="fa-solid fa-globe"></i> <span id="langBtnText">اردو</span>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn topbar-btn" onclick="window.NadwiUI.toggleTheme()" title="Toggle Dark/Light Mode">
+                <i id="themeToggleIcon" class="fa-solid fa-moon"></i> <span id="themeBtnLabel" class="d-none d-sm-inline ms-1 small">Theme</span>
+              </button>
+
+          <!-- PWA Desktop App Download Button -->
+          <button class="pwa-install-btn d-none d-sm-inline-flex" onclick="window.installPWA()" title="Install Desktop App">
+            <i class="fa-solid fa-download"></i> <span>App</span>
+          </button>
+
+          <!-- Notifications Dropdown -->
+          <div class="dropdown">
+            <button class="topbar-btn" data-bs-toggle="dropdown">
+              <i class="fa-solid fa-bell"></i>
+              <span class="unread-dot"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end shadow-lg p-2" style="width: 290px;">
+              <h6 class="dropdown-header fw-bold text-navy">Admin Notifications</h6>
+              <div class="p-2 border-bottom small">
+                <i class="fa-solid fa-circle-info text-primary me-1"></i> Mid-term exam schedule published.
+              </div>
+              <div class="p-2 small">
+                <i class="fa-solid fa-circle-check text-success me-1"></i> 3 new admission applications today.
+              </div>
+            </div>
+          </div>
+
+          <!-- User Menu Dropdown -->
+          <div class="dropdown">
+            <div class="topbar-user-pill" data-bs-toggle="dropdown">
+              <img src="../assets/avatars/male-admin.svg" alt="Admin">
+              <div class="topbar-user-details">
+                <span class="topbar-user-name">Dr. Muhammad Usman</span>
+                <span class="topbar-user-role-text">Administrator</span>
+              </div>
+              <i class="fa-solid fa-chevron-down small text-muted"></i>
+            </div>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg">
+              <li><a class="dropdown-item" href="../index.html"><i class="fa-solid fa-house me-2"></i> School Homepage</a></li>
+              <li><a class="dropdown-item" href="teacher.html"><i class="fa-solid fa-arrows-rotate me-2"></i> Switch to Teacher Portal</a></li>
+              <li><a class="dropdown-item" href="student.html"><i class="fa-solid fa-graduation-cap me-2"></i> Switch to Student Portal</a></li>
+              <li><a class="dropdown-item" href="parent.html"><i class="fa-solid fa-users me-2"></i> Switch to Parent Portal</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item text-danger fw-bold" href="#" onclick="window.NadwiAuth.logout(); return false;">
+                  <i class="fa-solid fa-arrow-right-from-bracket me-2"></i> Sign Out
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Content Body -->
+      <div class="dashboard-content-body">
+        
+        <!-- ========================================================
+             MODULE 1: DASHBOARD OVERVIEW
+             ======================================================== -->
+        <section class="erp-module-section active" id="mod-dashboard">
+          <!-- Welcome Banner -->
+          <div class="dashboard-welcome-banner animate-fade-in-down">
+            <div class="banner-urdu-greeting">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ — السلام علیکم</div>
+            <h2 class="banner-main-title">JAMIA ABUL HASAN ALI NADWI (RABBANI FOUNDATION MARUL)</h2>
+            <p class="banner-subtitle mb-0">
+              Administrative Control Hub for Nursery, LKG, UKG and Classes 1st to 4th Standard. Future expansion to Grades 5th–10th prepared for upcoming phases.
+            </p>
+          </div>
+
+          <!-- 8 Overview Stat Cards -->
+          <div class="stat-cards-grid animate-fade-in-up">
+            <!-- Card 1 -->
+            <div class="dash-stat-card">
+              <div class="stat-card-info">
+                <p data-i18n="totalStudents">Total Students</p>
+                <h3 id="totalStudentsCount">840</h3>
+                <span class="stat-card-trend up"><i class="fa-solid fa-arrow-up"></i> 100% Boys Campus</span>
+              </div>
+              <div class="stat-card-icon-box blue"><i class="fa-solid fa-users"></i></div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="dash-stat-card gold">
+              <div class="stat-card-info">
+                <p data-i18n="totalTeachers">Total Faculty</p>
+                <h3 id="totalTeachersCount">45</h3>
+                <span class="stat-card-trend up"><i class="fa-solid fa-circle-check"></i> Scholars &amp; Teachers</span>
+              </div>
+              <div class="stat-card-icon-box gold"><i class="fa-solid fa-user-tie"></i></div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="dash-stat-card green">
+              <div class="stat-card-info">
+                <p data-i18n="todayAttendance">Today's Attendance</p>
+                <h3>96.4%</h3>
+                <span class="stat-card-trend up"><i class="fa-solid fa-arrow-up"></i> Above 95% target</span>
+              </div>
+              <div class="stat-card-icon-box green"><i class="fa-solid fa-calendar-check"></i></div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="dash-stat-card purple">
+              <div class="stat-card-info">
+                <p data-i18n="feeCollection">Fee Collected (Oct)</p>
+                <h3 id="totalFeeCollected">₹337,000</h3>
+                <span class="stat-card-trend up"><i class="fa-solid fa-shield-check"></i> Demo Bank Sync</span>
+              </div>
+              <div class="stat-card-icon-box purple"><i class="fa-solid fa-money-bill-wave"></i></div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="dash-stat-card red">
+              <div class="stat-card-info">
+                <p data-i18n="pendingFees">Pending Dues</p>
+                <h3 id="totalFeePending">₹51,200</h3>
+                <span class="stat-card-trend down"><i class="fa-solid fa-clock-rotate-left"></i> Notices Dispatched</span>
+              </div>
+              <div class="stat-card-icon-box red"><i class="fa-solid fa-circle-exclamation"></i></div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="dash-stat-card">
+              <div class="stat-card-info">
+                <p data-i18n="totalClasses">Active Classes</p>
+                <h3>14</h3>
+                <span class="stat-card-trend"><i class="fa-solid fa-graduation-cap"></i> Grades 1-10 &amp; Alimiat</span>
+              </div>
+              <div class="stat-card-icon-box blue"><i class="fa-solid fa-school"></i></div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="dash-stat-card gold">
+              <div class="stat-card-info">
+                <p data-i18n="newAdmissions">New Admissions</p>
+                <h3>38</h3>
+                <span class="stat-card-trend up"><i class="fa-solid fa-user-plus"></i> Session 2026-27</span>
+              </div>
+              <div class="stat-card-icon-box gold"><i class="fa-solid fa-folder-plus"></i></div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="dash-stat-card green">
+              <div class="stat-card-info">
+                <p>Quranic Huffaz</p>
+                <h3>180+</h3>
+                <span class="stat-card-trend up"><i class="fa-solid fa-award"></i> Certified Huffaz</span>
+              </div>
+              <div class="stat-card-icon-box green"><i class="fa-solid fa-book"></i></div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="quick-action-toolbar">
+            <button class="btn-nadwi btn-nadwi-primary" data-bs-toggle="modal" data-bs-target="#addStudentModal">
+              <i class="fa-solid fa-user-plus"></i> Add Male Student
+            </button>
+            <button class="btn-nadwi btn-nadwi-gold" data-bs-toggle="modal" data-bs-target="#addTeacherModal">
+              <i class="fa-solid fa-id-badge"></i> Add Faculty
+            </button>
+            <button class="btn-nadwi btn-nadwi-navy" onclick="previewOfficialReceipt('REC-2026-881')">
+              <i class="fa-solid fa-receipt"></i> Sample Fee Receipt
+            </button>
+            <button class="btn-nadwi btn-nadwi-outline" onclick="viewBonafideCertificate('S-1001')">
+              <i class="fa-solid fa-award"></i> Bonafide Certificate
+            </button>
+            <button class="btn-nadwi btn-nadwi-outline" onclick="resetDemoDataAction()">
+              <i class="fa-solid fa-rotate-left"></i> Reset Demo Data
+            </button>
+          </div>
+
+          <!-- Charts Row -->
+          <div class="row g-4 mb-4">
+            <div class="col-lg-8">
+              <div class="dash-card h-100">
+                <div class="dash-card-header">
+                  <div class="dash-card-title"><i class="fa-solid fa-chart-line text-primary"></i> Weekly Student Attendance (%)</div>
+                  <span class="badge-nadwi badge-success">Target: 95%+</span>
+                </div>
+                <div class="dash-card-body" style="height: 280px;">
+                  <canvas id="adminAttendanceCanvas"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="dash-card h-100">
+                <div class="dash-card-header">
+                  <div class="dash-card-title"><i class="fa-solid fa-chart-pie text-warning"></i> Student Distribution</div>
+                </div>
+                <div class="dash-card-body" style="height: 280px;">
+                  <canvas id="adminStudentDistCanvas"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Monthly Fee Bar Chart -->
+          <div class="dash-card mb-4">
+            <div class="dash-card-header">
+              <div class="dash-card-title"><i class="fa-solid fa-chart-simple text-success"></i> Monthly Fee Inflow vs Dues (Demo ₹)</div>
+              <span class="badge-nadwi badge-gold">Audited 2026</span>
+            </div>
+            <div class="dash-card-body" style="height: 290px;">
+              <canvas id="adminFeeCanvas"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             MODULE 2: STUDENT MANAGEMENT
+             ======================================================== -->
+        <section class="erp-module-section" id="mod-students">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="d-flex align-items-center gap-2">
+                <h4 class="dash-card-title mb-0"><i class="fa-solid fa-users text-primary"></i> Student Directory (Male Only Campus)</h4>
+                <span class="badge-nadwi badge-gold">Strict Fictional Policy</span>
+              </div>
+              <button class="btn-nadwi btn-nadwi-primary btn-nadwi-sm" data-bs-toggle="modal" data-bs-target="#addStudentModal">
+                <i class="fa-solid fa-plus"></i> Add New Student
+              </button>
+            </div>
+
+            <div class="p-3 bg-light border-bottom d-flex gap-3 flex-wrap">
+              <div class="flex-grow-1" style="max-width: 320px;">
+                <input type="text" id="studentSearchInput" class="form-control-nadwi" placeholder="Search by name, roll no, or ID..." onkeyup="filterStudents()">
+              </div>
+              <div>
+                <select id="studentClassFilter" class="form-control-nadwi" onchange="filterStudents()">
+                  <option value="">All Classes (Nursery - 4th)</option>
+                  <option value="Nursery">Nursery</option>
+                  <option value="LKG">LKG</option>
+                  <option value="UKG">UKG</option>
+                  <option value="Class 1">Class 1</option>
+                  <option value="Class 2">Class 2</option>
+                  <option value="Class 3">Class 3</option>
+                  <option value="Class 4">Class 4</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="table-responsive-nadwi">
+              <table class="table-nadwi">
+                <thead>
+                  <tr>
+                    <th>Student ID</th>
+                    <th>Full Name &amp; Roll</th>
+                    <th>Class</th>
+                    <th>Father / Guardian</th>
+                    <th>Emergency Phone</th>
+                    <th>Fee Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminStudentTableBody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             MODULE 3: TEACHER FACULTY
+             ======================================================== -->
+        <section class="erp-module-section" id="mod-teachers">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-user-tie text-primary"></i> Faculty &amp; Islamic Scholars Management</h4>
+              <button class="btn-nadwi btn-nadwi-gold btn-nadwi-sm" data-bs-toggle="modal" data-bs-target="#addTeacherModal">
+                <i class="fa-solid fa-plus"></i> Add Faculty Member
+              </button>
+            </div>
+
+            <div class="table-responsive-nadwi">
+              <table class="table-nadwi">
+                <thead>
+                  <tr>
+                    <th>Faculty ID</th>
+                    <th>Scholar / Teacher Name</th>
+                    <th>Primary Subject</th>
+                    <th>Academic Qualifications</th>
+                    <th>Teaching Experience</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminTeacherTableBody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             MODULE 4: CLASS MANAGEMENT
+             ======================================================== -->
+        <section class="erp-module-section" id="mod-classes">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-school text-primary"></i> Class &amp; Section Allocations</h4>
+            </div>
+            <div class="table-responsive-nadwi">
+              <table class="table-nadwi">
+                <thead>
+                  <tr>
+                    <th>Class Code</th>
+                    <th>Grade / Program</th>
+                    <th>Class Teacher In-charge</th>
+                    <th>Enrolled Count</th>
+                    <th>Room Allocation</th>
+                    <th>Academic Status</th>
+                  </tr>
+                </thead>
+                <tbody id="adminClassTableBody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             MODULE 5: ATTENDANCE SYSTEM
+             ======================================================== -->
+        <section class="erp-module-section" id="mod-attendance">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-calendar-check text-primary"></i> Daily Attendance Register</h4>
+              <button class="btn-nadwi btn-nadwi-primary btn-nadwi-sm" id="adminMarkAllPresentBtn">
+                <i class="fa-solid fa-check-double"></i> Mark All Class Present
+              </button>
+            </div>
+            <div class="dash-card-body">
+              <div class="row g-3 mb-4">
+                <div class="col-md-4">
+                  <label class="form-label-nadwi">Select Class:</label>
+                  <select class="form-control-nadwi">
+                    <option>Grade 10 - Section A</option>
+                    <option>Grade 9 - Section A</option>
+                    <option>Grade 8 - Section B</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label-nadwi">Attendance Date:</label>
+                  <input type="date" class="form-control-nadwi" value="2026-10-30">
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                  <button class="btn-nadwi btn-nadwi-navy w-100" onclick="window.NadwiUI.toast('Attendance records filtered.')">
+                    <i class="fa-solid fa-filter"></i> Load Register
+                  </button>
+                </div>
+              </div>
+
+              <div class="alert alert-info d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-info fs-5"></i>
+                <span>Showing 12 demo students for Grade 10-A. Attendance is updated in real time into student and parent portals.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             MODULE 6: FEES & ACCOUNTS
+             ======================================================== -->
+        <section class="erp-module-section" id="mod-fees">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-coins text-success"></i> Fee Collections &amp; Official Receipts</h4>
+            </div>
+            <div class="table-responsive-nadwi">
+              <table class="table-nadwi">
+                <thead>
+                  <tr>
+                    <th>Voucher #</th>
+                    <th>Student Name</th>
+                    <th>Fee Category</th>
+                    <th>Amount</th>
+                    <th>Payment Date</th>
+                    <th>Status</th>
+                    <th>Voucher</th>
+                  </tr>
+                </thead>
+                <tbody id="adminFeeTableBody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             MODULE 7: CERTIFICATES & ID
+             ======================================================== -->
+        <section class="erp-module-section" id="mod-certificates">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-award text-gold"></i> Official Institutional Certificate &amp; ID Card Generator</h4>
+            </div>
+            <div class="dash-card-body">
+              <p class="text-secondary">
+                Generate high-resolution printable Bonafide Certificates, Character Certificates, and Student Identity Cards complete with the official school crest, Urdu calligraphy, and administrative endorsements.
+              </p>
+
+              <div class="row g-4 mt-2">
+                <div class="col-md-6">
+                  <div class="p-4 rounded border bg-light text-center">
+                    <i class="fa-solid fa-award text-gold fs-1 mb-2 d-block"></i>
+                    <h5 class="fw-bold text-navy">Bonafide &amp; Character Certificate</h5>
+                    <p class="small text-secondary mb-3">Accredited testimonial of student enrollment and exemplary moral behavior.</p>
+                    <button class="btn-nadwi btn-nadwi-primary" onclick="viewBonafideCertificate('S-1001')">
+                      <i class="fa-solid fa-print"></i> Preview &amp; Print Sample
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="p-4 rounded border bg-light text-center">
+                    <i class="fa-solid fa-id-badge text-primary fs-1 mb-2 d-block"></i>
+                    <h5 class="fw-bold text-navy">Student Identity Card</h5>
+                    <p class="small text-secondary mb-3">Pocket-sized ID card with photo placeholder, blood group, roll number, and QR code.</p>
+                    <button class="btn-nadwi btn-nadwi-gold" onclick="viewStudentIdCard('S-1001')">
+                      <i class="fa-solid fa-print"></i> Preview &amp; Print Sample
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             MODULE 8: TIMETABLE SCHEDULE
+             ======================================================== -->
+        <section class="erp-module-section" id="mod-timetable">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-table-list text-primary"></i> Master Academic Timetable (Grade 10)</h4>
+            </div>
+            <div class="table-responsive-nadwi">
+              <table class="table-nadwi">
+                <thead>
+                  <tr>
+                    <th>Day</th>
+                    <th>08:30 - 09:20</th>
+                    <th>09:20 - 10:10</th>
+                    <th>10:10 - 11:00</th>
+                    <th>11:20 - 12:10</th>
+                    <th>12:10 - 01:00</th>
+                    <th>01:45 - 02:45</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Monday</strong></td>
+                    <td>Quran Tafseer</td>
+                    <td>Physics</td>
+                    <td>Mathematics</td>
+                    <td>Arabic Grammar</td>
+                    <td>English</td>
+                    <td>Science Lab</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Tuesday</strong></td>
+                    <td>Hadith Studies</td>
+                    <td>Chemistry</td>
+                    <td>Mathematics</td>
+                    <td>Arabic Grammar</td>
+                    <td>Urdu</td>
+                    <td>Computer Lab</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Wednesday</strong></td>
+                    <td>Quran Tafseer</td>
+                    <td>Biology</td>
+                    <td>Mathematics</td>
+                    <td>Islamic History</td>
+                    <td>English</td>
+                    <td>Study Circle</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Thursday</strong></td>
+                    <td>Hadith Studies</td>
+                    <td>Physics</td>
+                    <td>Mathematics</td>
+                    <td>Arabic Grammar</td>
+                    <td>Urdu</td>
+                    <td>Speech Club</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Saturday</strong></td>
+                    <td>Seerat-un-Nabi</td>
+                    <td>Chemistry</td>
+                    <td>Mathematics</td>
+                    <td>Arabic Conversation</td>
+                    <td>English</td>
+                    <td>Weekly Review</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             MODULE 9: LIBRARY CATALOG
+             ======================================================== -->
+        <section class="erp-module-section" id="mod-library">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-book text-primary"></i> Library Book Catalog (Maktabah)</h4>
+            </div>
+            <div class="table-responsive-nadwi">
+              <table class="table-nadwi">
+                <thead>
+                  <tr>
+                    <th>Book Code</th>
+                    <th>Book Title &amp; Author</th>
+                    <th>Category</th>
+                    <th>Shelf Location</th>
+                    <th>Total Volumes</th>
+                    <th>Availability</th>
+                  </tr>
+                </thead>
+                <tbody id="adminLibraryTableBody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             MODULE 10: TRANSPORT MANAGEMENT
+             ======================================================== -->
+        <section class="erp-module-section" id="mod-transport">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-bus text-primary"></i> Transport Fleet &amp; Driver Logistics</h4>
+            </div>
+            <div class="table-responsive-nadwi">
+              <table class="table-nadwi">
+                <thead>
+                  <tr>
+                    <th>Route ID</th>
+                    <th>Route Route Description</th>
+                    <th>Assigned Male Driver</th>
+                    <th>Vehicle Reg. #</th>
+                    <th>Capacity / Enrolled</th>
+                    <th>Driver Contact</th>
+                  </tr>
+                </thead>
+                <tbody id="adminTransportTableBody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             MODULE 11: NOTICES & CIRCULARS
+             ======================================================== -->
+        <section class="erp-module-section" id="mod-notices">
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <div class="dash-card">
+                <div class="dash-card-header">
+                  <h5 class="dash-card-title mb-0"><i class="fa-solid fa-pen-to-square text-primary"></i> Broadcast New Notice</h5>
+                </div>
+                <div class="dash-card-body">
+                  <form id="addNoticeForm">
+                    <div class="form-group-nadwi">
+                      <label class="form-label-nadwi">Notice Headline *</label>
+                      <input type="text" id="noticeTitle" class="form-control-nadwi" placeholder="e.g., Annual Sports Day Announced" required>
+                    </div>
+
+                    <div class="form-group-nadwi">
+                      <label class="form-label-nadwi">Category *</label>
+                      <select id="noticeCategory" class="form-control-nadwi" required>
+                        <option value="Academics">Academics</option>
+                        <option value="Examinations">Examinations</option>
+                        <option value="Events">Events</option>
+                        <option value="Holidays">Holidays</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group-nadwi">
+                      <label class="form-label-nadwi">Target Audience *</label>
+                      <select id="noticeAudience" class="form-control-nadwi" required>
+                        <option value="All Students & Parents">All Students &amp; Parents</option>
+                        <option value="Teachers & Faculty">Teachers &amp; Faculty</option>
+                        <option value="High School Boys (8-10)">High School Boys (8-10)</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group-nadwi">
+                      <label class="form-label-nadwi">Notice Content *</label>
+                      <textarea id="noticeContent" class="form-control-nadwi" rows="3" placeholder="Enter notice announcement..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-nadwi btn-nadwi-primary w-100">
+                      <i class="fa-solid fa-tower-broadcast"></i> Publish Announcement
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="dash-card">
+                <div class="dash-card-header">
+                  <h5 class="dash-card-title mb-0"><i class="fa-solid fa-bullhorn text-warning"></i> Active Circulars</h5>
+                </div>
+                <div class="dash-card-body" id="adminNoticesList">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================================
+             MODULE 12: SETTINGS & SAAS EXPANSION
+             ======================================================== -->
+        <section class="erp-module-section" id="mod-settings">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h4 class="dash-card-title mb-0"><i class="fa-solid fa-gear text-primary"></i> School Configuration &amp; SaaS Multi-Tenant Prep</h4>
+            </div>
+            <div class="dash-card-body">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h6 class="fw-bold text-navy mb-2">School Official Identity</h6>
+                  <div class="p-3 bg-light rounded border mb-3">
+                    <div><strong>English Name:</strong> SYED ABUL HASAN ALI NADWI</div>
+                    <div class="font-urdu"><strong>اردو نام:</strong> سید ابوالحسن علی ندوی</div>
+                    <div><strong>Academic Model:</strong> Integrated Islamic &amp; Modern Secondary</div>
+                    <div><strong>Demographic:</strong> Boys Campus Exclusively</div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <h6 class="fw-bold text-navy mb-2">Demo Storage Administration</h6>
+                  <p class="text-secondary small mb-3">
+                    If demo records have been added or altered, use the button below to revert local storage back to default clean factory demo records.
+                  </p>
+                  <button class="btn-nadwi btn-nadwi-navy" onclick="resetDemoDataAction()">
+                    <i class="fa-solid fa-rotate-left me-1"></i> Reset to Factory Demo Data
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ========================================================
+       MODALS: ADD STUDENT, ADD TEACHER, PRINT PREVIEWS
+       ======================================================== -->
+
+  <!-- Modal: Add Student -->
+  <div class="modal fade" id="addStudentModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-nadwi-header">
+          <h5 class="modal-title"><i class="fa-solid fa-user-plus me-2"></i> Enroll Male Student</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="addStudentModalForm">
+          <div class="modal-body p-4">
+            <div class="demo-banner-alert py-2 mb-3">
+              <i class="fa-solid fa-shield-check"></i> Strictly male student names only (e.g., Muhammad Saad, Hamza Khan).
+            </div>
+            <div class="form-group-nadwi">
+              <label class="form-label-nadwi">Student Full Name *</label>
+              <input type="text" id="newStudentName" class="form-control-nadwi" placeholder="e.g., Muhammad Saad" required>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group-nadwi">
+                  <label class="form-label-nadwi">Class *</label>
+                  <select id="newStudentClass" class="form-control-nadwi" required>
+                    <option value="Nursery">Nursery</option>
+                    <option value="LKG">LKG</option>
+                    <option value="UKG">UKG</option>
+                    <option value="Class 1">Class 1</option>
+                    <option value="Class 2">Class 2</option>
+                    <option value="Class 3">Class 3</option>
+                    <option value="Class 4">Class 4</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group-nadwi">
+                  <label class="form-label-nadwi">Roll No</label>
+                  <input type="text" id="newStudentRoll" class="form-control-nadwi" placeholder="115">
+                </div>
+              </div>
+            </div>
+            <div class="form-group-nadwi">
+              <label class="form-label-nadwi">Father / Guardian Name *</label>
+              <input type="text" id="newStudentGuardian" class="form-control-nadwi" placeholder="e.g., Tariq Mahmood" required>
+            </div>
+            <div class="form-group-nadwi">
+              <label class="form-label-nadwi">Emergency Contact Phone *</label>
+              <input type="tel" id="newStudentPhone" class="form-control-nadwi" placeholder="0321-xxxxxxx" required value="0321-5550015">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn-nadwi btn-nadwi-primary btn-nadwi-sm">Save Student</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Add Faculty -->
+  <div class="modal fade" id="addTeacherModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-nadwi-header">
+          <h5 class="modal-title"><i class="fa-solid fa-id-badge me-2"></i> Add Faculty Scholar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="addTeacherModalForm">
+          <div class="modal-body p-4">
+            <div class="form-group-nadwi">
+              <label class="form-label-nadwi">Scholar / Teacher Name (Male) *</label>
+              <input type="text" id="newTeacherName" class="form-control-nadwi" placeholder="e.g., Maulana Salman Nadwi" required>
+            </div>
+            <div class="form-group-nadwi">
+              <label class="form-label-nadwi">Designation *</label>
+              <input type="text" id="newTeacherDesignation" class="form-control-nadwi" placeholder="e.g., Senior Arabic Lecturer" required>
+            </div>
+            <div class="form-group-nadwi">
+              <label class="form-label-nadwi">Subject *</label>
+              <input type="text" id="newTeacherSubject" class="form-control-nadwi" placeholder="e.g., Quranic Arabic &amp; Hadith" required>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group-nadwi">
+                  <label class="form-label-nadwi">Qualifications *</label>
+                  <input type="text" id="newTeacherQual" class="form-control-nadwi" placeholder="e.g., Fazil-e-Nadwa, M.A." required>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group-nadwi">
+                  <label class="form-label-nadwi">Experience *</label>
+                  <input type="text" id="newTeacherExp" class="form-control-nadwi" placeholder="e.g., 8 Years" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn-nadwi btn-nadwi-gold btn-nadwi-sm">Enroll Faculty</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Fee Receipt Preview & Print -->
+  <div class="modal fade" id="receiptPreviewModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-nadwi-header">
+          <h5 class="modal-title"><i class="fa-solid fa-receipt me-2"></i> Official Fee Receipt</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4" id="receiptModalContent">
+          <!-- Rendered dynamically -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn-nadwi btn-nadwi-primary btn-nadwi-sm" onclick="window.NadwiUI.printElement('printableReceiptBox', 'Fee Receipt')">
+            <i class="fa-solid fa-print"></i> Print Receipt
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Certificate Preview & Print -->
+  <div class="modal fade" id="certificatePreviewModal" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-nadwi-header">
+          <h5 class="modal-title"><i class="fa-solid fa-award me-2"></i> Official Bonafide Certificate</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4" id="certificateModalContent">
+          <!-- Rendered dynamically -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn-nadwi btn-nadwi-primary btn-nadwi-sm" onclick="window.NadwiUI.printElement('printableCertificateBox', 'Bonafide Certificate')">
+            <i class="fa-solid fa-print"></i> Print Certificate
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: ID Card Preview & Print -->
+  <div class="modal fade" id="idCardPreviewModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-nadwi-header">
+          <h5 class="modal-title"><i class="fa-solid fa-id-badge me-2"></i> Student Identity Card</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4 text-center" id="idCardModalContent">
+          <!-- Rendered dynamically -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn-nadwi btn-nadwi-primary btn-nadwi-sm" onclick="window.NadwiUI.printElement('printableIdCardBox', 'Student ID Card')">
+            <i class="fa-solid fa-print"></i> Print ID Card
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CDNs -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Core App Scripts -->
+  <script src="../js/data.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/language.js"></script>
+  <script src="../js/interactions.js"></script>
+  <script src="../js/charts.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
+

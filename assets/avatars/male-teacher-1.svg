@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgTeacher1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="url(#bgTeacher1)" stroke="#D6A84F" stroke-width="2.5"/>
+  <!-- Islamic Studies Male Teacher -->
+  <!-- Shoulders & Coat -->
+  <path d="M 22 112 C 24 88, 40 80, 60 80 C 80 80, 96 88, 98 112 Z" fill="#1E293B"/>
+  <path d="M 48 80 L 60 96 L 72 80 Z" fill="#F8FAFC"/>
+  <!-- Neck -->
+  <rect x="52" y="66" width="16" height="16" rx="4" fill="#F3C59D"/>
+  <!-- Head -->
+  <ellipse cx="60" cy="52" rx="19" ry="22" fill="#F3C59D"/>
+  <!-- Trimmed dark beard -->
+  <path d="M 45 52 C 45 74, 75 74, 75 52 C 73 63, 47 63, 45 52 Z" fill="#1E293B"/>
+  <!-- Eyes -->
+  <circle cx="53" cy="48" r="2.2" fill="#0F172A"/>
+  <circle cx="67" cy="48" r="2.2" fill="#0F172A"/>
+  <!-- Eyebrows -->
+  <path d="M 48 43 Q 53 41 57 43" stroke="#1E293B" stroke-width="2" fill="none"/>
+  <path d="M 63 43 Q 67 41 72 43" stroke="#1E293B" stroke-width="2" fill="none"/>
+  <!-- Cap / Kufi -->
+  <path d="M 41 40 C 41 24, 79 24, 79 40 Z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/>
+</svg>
+

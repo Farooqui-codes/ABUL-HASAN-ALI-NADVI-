@@ -1,0 +1,445 @@
+/* ==========================================================================
+   SYED ABUL HASAN ALI NADWI — PREMIUM ISLAMIC SCHOOL ERP
+   Components & Print Templates (css/components.css)
+   ========================================================================== */
+
+/* Data Tables */
+.table-responsive-nadwi {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.table-nadwi {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.88rem;
+  margin-bottom: 0;
+}
+
+.table-nadwi thead {
+  background: #F8FAFC;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.table-nadwi th {
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  color: var(--color-deep-navy);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+}
+
+.table-nadwi td {
+  padding: 0.85rem 1rem;
+  color: var(--color-main-text);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.table-nadwi tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.table-nadwi tbody tr:hover {
+  background-color: #F8FAFC;
+}
+
+.table-avatar-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.table-avatar-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-gold);
+}
+
+.table-user-name {
+  font-weight: 600;
+  color: var(--color-deep-navy);
+  line-height: 1.2;
+}
+
+.table-user-sub {
+  font-size: 0.75rem;
+  color: var(--color-secondary-text);
+}
+
+/* Action Icon Buttons */
+.action-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-secondary-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 0.9rem;
+}
+
+.action-btn:hover {
+  background: var(--color-light-blue);
+  color: var(--color-royal-blue);
+  border-color: var(--color-royal-blue);
+}
+
+.action-btn.delete:hover {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.action-btn.print:hover {
+  background: #FEF3C7;
+  color: #B45309;
+  border-color: #D6A84F;
+}
+
+/* Form Controls */
+.form-group-nadwi {
+  margin-bottom: 1.25rem;
+}
+
+.form-label-nadwi {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-deep-navy);
+  margin-bottom: 0.4rem;
+}
+
+.form-control-nadwi {
+  width: 100%;
+  padding: 0.65rem 0.95rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  background: #FFFFFF;
+  color: var(--color-main-text);
+  transition: all var(--transition-fast);
+}
+
+.form-control-nadwi:focus {
+  outline: none;
+  border-color: var(--color-royal-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Modal Custom Styles */
+.modal-nadwi-header {
+  background: linear-gradient(135deg, var(--color-deep-navy), #1E3A8A);
+  color: #FFFFFF;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 2px solid var(--color-gold);
+}
+
+.modal-nadwi-header .modal-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #FFFFFF;
+}
+
+.modal-nadwi-header .btn-close {
+  filter: invert(1);
+}
+
+/* ==========================================================================
+   DOCUMENT & CERTIFICATE PRINT TEMPLATES
+   ========================================================================== */
+
+/* 1. Official Bonafide / Character Certificate */
+.certificate-container {
+  background: #FFFDF7;
+  border: 12px double #142B4A;
+  padding: 3rem 2.5rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.certificate-inner-border {
+  border: 2px solid #D6A84F;
+  padding: 2.5rem 2rem;
+  position: relative;
+}
+
+.cert-corner-ornament {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #D6A84F;
+}
+
+.cert-top-left { top: 6px; left: 6px; border-right: none; border-bottom: none; }
+.cert-top-right { top: 6px; right: 6px; border-left: none; border-bottom: none; }
+.cert-bottom-left { bottom: 6px; left: 6px; border-right: none; border-top: none; }
+.cert-bottom-right { bottom: 6px; right: 6px; border-left: none; border-top: none; }
+
+.cert-bismillah {
+  font-family: var(--font-urdu);
+  font-size: 1.6rem;
+  color: var(--color-gold-dark);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.cert-school-name-en {
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--color-deep-navy);
+  letter-spacing: 1.5px;
+  margin-bottom: 0.2rem;
+}
+
+.cert-school-name-ur {
+  font-family: var(--font-urdu);
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--color-royal-blue);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.cert-title-badge {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.cert-title-text {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #142B4A;
+  border-bottom: 2px solid var(--color-gold);
+  padding: 0.35rem 2rem;
+}
+
+.cert-body-text {
+  font-size: 1.05rem;
+  line-height: 2;
+  color: #1E293B;
+  text-align: justify;
+  margin: 2rem 0;
+}
+
+.cert-highlight {
+  font-weight: 700;
+  color: var(--color-royal-blue);
+  border-bottom: 1px dotted #64748B;
+  padding: 0 0.4rem;
+}
+
+.cert-signatures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.5rem;
+  padding-top: 1rem;
+}
+
+.cert-signature-box {
+  text-align: center;
+  width: 180px;
+}
+
+.cert-sig-line {
+  border-top: 1.5px solid #142B4A;
+  margin-bottom: 0.35rem;
+}
+
+/* 2. Student ID Card Template */
+.id-card-preview-wrap {
+  width: 320px;
+  height: 480px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--color-gold);
+  overflow: hidden;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.id-card-header {
+  background: linear-gradient(135deg, var(--color-deep-navy), #1E3A8A);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1rem 0.75rem;
+  border-bottom: 3px solid var(--color-gold);
+}
+
+.id-card-header h5 {
+  color: #FFFFFF;
+  font-size: 0.88rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.id-card-header p {
+  font-family: var(--font-urdu);
+  color: var(--color-gold-light);
+  font-size: 0.95rem;
+  margin: 0.15rem 0 0;
+}
+
+.id-card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.id-card-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 3px solid var(--color-royal-blue);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 0.75rem;
+}
+
+.id-card-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-deep-navy);
+  margin-bottom: 0.2rem;
+}
+
+.id-card-role {
+  font-size: 0.8rem;
+  color: var(--color-royal-blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.id-card-details-table {
+  width: 100%;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.id-card-details-table td {
+  padding: 0.25rem 0.4rem;
+}
+
+.id-card-details-table td:first-child {
+  font-weight: 700;
+  color: var(--color-secondary-text);
+  width: 40%;
+}
+
+.id-card-footer {
+  background: #F8FAFC;
+  border-top: 1px solid var(--color-border);
+  padding: 0.65rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--color-secondary-text);
+}
+
+/* 3. Fee Receipt Template */
+.receipt-container {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  max-width: 650px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-md);
+}
+
+.receipt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid var(--color-deep-navy);
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.receipt-badge {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--color-border);
+  font-size: 0.9rem;
+}
+
+.receipt-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-deep-navy);
+  border-top: 2px solid var(--color-deep-navy);
+  margin-top: 1rem;
+}
+
+/* 4. Student Quiz Demo Interface */
+.quiz-box {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-option-label {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.25rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.quiz-option-label:hover {
+  background: var(--color-light-blue);
+  border-color: var(--color-royal-blue);
+}
+
+.quiz-option-label.selected {
+  background: #EFF6FF;
+  border-color: var(--color-royal-blue);
+  font-weight: 600;
+}
+

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events &amp; Academic Calendar — SYED ABUL HASAN ALI NADWI</title>
+  
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#064E3B">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo/logo-mark.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg py-2">
+      <div class="container">
+        <a class="navbar-brand-wrap" href="../index.html">
+          <img src="../assets/logo/official-logo.png" alt="Jamia Abul Hasan Ali Nadwi Logo" height="52" class="me-2">
+          <div class="brand-title-wrap">
+            <span class="brand-title-urdu" style="font-size: 1.05rem;">جامعہ ابوالحسن علی ندوی</span>
+            <span class="brand-title-en" style="font-size: 0.75rem;">JAMIA ABUL HASAN ALI NADWI</span>
+          </div>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#publicNav">
+          <i class="fa-solid fa-bars fs-2 text-primary"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="publicNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html" data-i18n="navHome">Home</a>
+            </li>
+
+            <!-- About Us Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="navAbout">
+                About Us
+              </a>
+              <ul class="dropdown-menu animate-fade-in-down" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item " href="about.html"><i class="fa-solid fa-school me-2"></i> About &amp; Philosophy</a></li>
+                <li><a class="dropdown-item " href="faculty.html"><i class="fa-solid fa-chalkboard-user me-2"></i> Faculty &amp; Asatizah</a></li>
+                <li><a class="dropdown-item " href="facilities.html"><i class="fa-solid fa-building me-2"></i> Campus &amp; Facilities</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="academics.html" data-i18n="navAcademics">Academics</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="admissions.html" data-i18n="navAdmissions">Admissions</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="contact.html" data-i18n="navContact">Contact</a>
+            </li>
+
+            <!-- Controls: Language & Theme Side by Side in 1 Clean Row -->
+            <li class="nav-item ms-lg-3 my-2 my-lg-0">
+              <div class="site-nav-controls">
+                <!-- Language Switcher -->
+                <button class="lang-toggle-btn" onclick="window.NadwiLang.toggle()" title="Switch Language / زبان تبدیل کریں">
+                  <i class="fa-solid fa-globe"></i> <span id="langBtnText">اردو</span>
+                </button>
+
+                <!-- Dark / Light Theme Toggle -->
+                <button class="theme-toggle-btn" onclick="window.NadwiUI.toggleTheme()" title="Toggle Dark/Light Mode">
+                  <i id="themeToggleIcon" class="fa-solid fa-moon"></i>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="py-5" style="background: linear-gradient(135deg, #142B4A 0%, #1E3A8A 100%); color: #FFF;">
+    <div class="container text-center py-3">
+      <span class="badge-nadwi badge-gold mb-2">CAMPUS CALENDAR</span>
+      <h1 class="display-5 fw-bold text-white mb-2" data-i18n="navEvents">Events &amp; Activities</h1>
+      <div class="font-urdu text-gold fs-4">تقاریب و تعلیمی کیلنڈر — سالانہ سرگرمیاں</div>
+    </div>
+  </section>
+
+  <!-- Events Listing -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">UPCOMING GATHERINGS</span>
+        <h2 class="section-title">Academic &amp; Cultural Calendar</h2>
+        <p class="section-subtitle">Competitions, parent conferences, and commemorative Islamic events.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Event 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="stat-icon blue text-center" style="width: 60px; height: 60px;">
+                <span class="d-block fw-bold fs-4 leading-none">12</span>
+                <span class="small text-uppercase">Nov</span>
+              </div>
+              <div>
+                <span class="badge-nadwi badge-gold">Spiritual &amp; Literary</span>
+                <h5 class="fw-bold text-navy mb-0 mt-1">Seerat-un-Nabi (PBUH) Conference</h5>
+              </div>
+            </div>
+            <p class="feature-desc">
+              Annual grand gathering featuring Arabic Qira'at recitations, Urdu eulogies, and guest lectures by esteemed scholars on the Prophetic character.
+            </p>
+            <div class="border-top pt-2 small text-muted">
+              <i class="fa-solid fa-location-dot me-1"></i> Grand Musalla Auditorium • 09:30 AM
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="stat-icon gold text-center" style="width: 60px; height: 60px;">
+                <span class="d-block fw-bold fs-4 leading-none">15</span>
+                <span class="small text-uppercase">Nov</span>
+              </div>
+              <div>
+                <span class="badge-nadwi badge-blue">Assessments</span>
+                <h5 class="fw-bold text-navy mb-0 mt-1">Mid-Term Term Examination</h5>
+              </div>
+            </div>
+            <p class="feature-desc">
+              Comprehensive mid-session written and oral examinations across all grades, including Hifz assessment and modern science papers.
+            </p>
+            <div class="border-top pt-2 small text-muted">
+              <i class="fa-solid fa-clock me-1"></i> Exam Blocks A &amp; B • 08:30 AM - 11:30 AM
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="stat-icon green text-center" style="width: 60px; height: 60px;">
+                <span class="d-block fw-bold fs-4 leading-none">05</span>
+                <span class="small text-uppercase">Dec</span>
+              </div>
+              <div>
+                <span class="badge-nadwi badge-success">STEM &amp; Innovation</span>
+                <h5 class="fw-bold text-navy mb-0 mt-1">Annual Science &amp; Robotics Expo</h5>
+              </div>
+            </div>
+            <p class="feature-desc">
+              Live models of solar tracking systems, hydraulic cranes, and physics demonstrations conceptualized and built by male secondary students.
+            </p>
+            <div class="border-top pt-2 small text-muted">
+              <i class="fa-solid fa-location-dot me-1"></i> Science Hall Quadrangle • 10:00 AM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p class="mb-1">&copy; 2026 <strong>SYED ABUL HASAN ALI NADWI</strong>. <span data-i18n="allRightsReserved">All Rights Reserved.</span></p>
+      <small class="text-muted">Strict Islamic Boys School Demo Data Policy Compliant.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/language.js"></script>
+  <script src="../js/interactions.js"></script>
+  <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
+

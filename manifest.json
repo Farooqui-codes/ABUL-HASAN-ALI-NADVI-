@@ -1,0 +1,26 @@
+{
+  "name": "Jamia Abul Hasan Ali Nadwi — School ERP Portal",
+  "short_name": "Nadwi ERP",
+  "description": "Complete Islamic School Management ERP Portal for Jamia Abul Hasan Ali Nadwi (Rabbani Foundation Marul)",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#09121F",
+  "theme_color": "#064E3B",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/logo/official-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/logo/official-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity"]
+}
+
