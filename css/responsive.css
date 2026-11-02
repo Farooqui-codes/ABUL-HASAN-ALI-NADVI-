@@ -251,6 +251,28 @@
     grid-template-columns: 1fr;
   }
 
+  /* Developer Cards Mobile */
+  .developers-section {
+    padding: 3.5rem 0 4rem;
+  }
+
+  .developer-card {
+    padding: 2.2rem 1.5rem;
+  }
+
+  .developer-avatar-wrapper {
+    width: 130px;
+    height: 130px;
+  }
+
+  .developer-name {
+    font-size: 1.28rem;
+  }
+
+  .developer-bio {
+    font-size: 0.88rem;
+  }
+
   .dashboard-content-body {
     padding: 1rem 0.75rem;
   }

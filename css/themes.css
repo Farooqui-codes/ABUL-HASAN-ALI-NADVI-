@@ -510,6 +510,55 @@
   border-color: var(--color-border) !important;
 }
 
+/* Behind the Code (Developers Section) in Dark Mode */
+[data-theme="dark"] .developers-section {
+  background: linear-gradient(180deg, #061A14 0%, #0B251D 100%) !important;
+  border-top-color: var(--color-border) !important;
+}
+
+[data-theme="dark"] .developer-card {
+  background-color: var(--color-bg-card) !important;
+  border-color: var(--color-border) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .developer-card:hover {
+  border-color: rgba(214, 168, 79, 0.5) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 20px rgba(52, 211, 153, 0.15) !important;
+}
+
+[data-theme="dark"] .developer-avatar-inner {
+  background: #0D2E24 !important;
+}
+
+[data-theme="dark"] .developer-name {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .developer-role-tag {
+  background: rgba(52, 211, 153, 0.15) !important;
+  border-color: rgba(52, 211, 153, 0.3) !important;
+  color: #34D399 !important;
+}
+
+[data-theme="dark"] .developer-bio {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .btn-developer-portfolio {
+  background: linear-gradient(135deg, #0F5132 0%, #064E3B 100%) !important;
+  border-color: #D6A84F !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .btn-developer-portfolio:hover {
+  background: linear-gradient(135deg, #D6A84F 0%, #B45309 100%) !important;
+  border-color: #FDE68A !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 24px rgba(214, 168, 79, 0.45) !important;
+}
+
 /* Icon Wrappers in Dark Mode */
 [data-theme="dark"] .credibility-icon,
 [data-theme="dark"] .curriculum-icon-wrap,

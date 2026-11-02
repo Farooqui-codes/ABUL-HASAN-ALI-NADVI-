@@ -4,7 +4,7 @@
  * fallback to cache when offline.
  */
 
-const CACHE_NAME = 'nadwi-erp-v5';
+const CACHE_NAME = 'nadwi-erp-v6';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -19,7 +19,9 @@ const ASSETS_TO_CACHE = [
   './js/language.js',
   './js/interactions.js',
   './js/main.js',
-  './assets/logo/official-logo.png'
+  './assets/logo/official-logo.png',
+  './assets/images/developers/umair-farooqui.jpg',
+  './assets/images/developers/sayed-shaad.jpg'
 ];
 
 // Force immediate activation
