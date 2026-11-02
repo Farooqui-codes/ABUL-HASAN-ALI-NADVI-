@@ -112,6 +112,37 @@
   border-color: #D6A84F;
 }
 
+/* Badges & Pills */
+.badge-nadwi {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.32rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.4px;
+}
+
+.badge-nadwi.badge-emerald,
+.badge-nadwi.badge-blue {
+  background: var(--color-bg-tint);
+  color: var(--color-primary);
+  border: 1px solid rgba(6, 78, 59, 0.2);
+}
+
+.badge-nadwi.badge-gold {
+  background: #FEF3C7;
+  color: #B45309;
+  border: 1px solid rgba(214, 168, 79, 0.4);
+}
+
+.badge-nadwi.badge-white {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 /* Form Controls */
 .form-group-nadwi {
   margin-bottom: 1.25rem;

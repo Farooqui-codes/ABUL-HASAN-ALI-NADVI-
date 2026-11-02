@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us — SYED ABUL HASAN ALI NADWI</title>
+  <title>Contact Us — JAMIA ABUL HASAN ALI NADWI</title>
   
   <link rel="manifest" href="../manifest.json">
   <meta name="theme-color" content="#064E3B">
@@ -28,14 +28,15 @@
     <nav class="navbar navbar-expand-lg py-2">
       <div class="container">
         <a class="navbar-brand-wrap" href="../index.html">
-          <img src="../assets/logo/official-logo.png" alt="Jamia Abul Hasan Ali Nadwi Logo" height="52" class="me-2">
+          <img src="../assets/logo/official-logo.png" alt="Jamia Abul Hasan Ali Nadwi Logo" height="50">
           <div class="brand-title-wrap">
-            <span class="brand-title-urdu" style="font-size: 1.05rem;">جامعہ ابوالحسن علی ندوی</span>
-            <span class="brand-title-en" style="font-size: 0.75rem;">JAMIA ABUL HASAN ALI NADWI</span>
+            <span class="brand-title-urdu">جامعہ ابوالحسن علی ندوی</span>
+            <span class="brand-title-en">JAMIA ABUL HASAN ALI NADWI</span>
+            <small class="brand-title-sub">RABBANI FOUNDATION MARUL</small>
           </div>
         </a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#publicNav">
-          <i class="fa-solid fa-bars fs-2 text-primary"></i>
+          <i class="fa-solid fa-bars fs-2 text-success"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="publicNav">
@@ -46,37 +47,53 @@
 
             <!-- About Us Dropdown -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle " href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="navAbout">
+              <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="navAbout">
                 About Us
               </a>
               <ul class="dropdown-menu animate-fade-in-down" aria-labelledby="aboutDropdown">
-                <li><a class="dropdown-item " href="about.html"><i class="fa-solid fa-school me-2"></i> About &amp; Philosophy</a></li>
-                <li><a class="dropdown-item " href="faculty.html"><i class="fa-solid fa-chalkboard-user me-2"></i> Faculty &amp; Asatizah</a></li>
-                <li><a class="dropdown-item " href="facilities.html"><i class="fa-solid fa-building me-2"></i> Campus &amp; Facilities</a></li>
+                <li><a class="dropdown-item" href="about.html"><i class="fa-solid fa-school text-success me-2"></i> About &amp; Philosophy</a></li>
+                <li><a class="dropdown-item" href="faculty.html"><i class="fa-solid fa-chalkboard-user text-success me-2"></i> Faculty &amp; Asatizah</a></li>
+                <li><a class="dropdown-item" href="facilities.html"><i class="fa-solid fa-building text-success me-2"></i> Campus &amp; Facilities</a></li>
+                <li><a class="dropdown-item" href="events.html"><i class="fa-solid fa-calendar-days text-success me-2"></i> Events &amp; Activities</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link " href="academics.html" data-i18n="navAcademics">Academics</a>
+              <a class="nav-link" href="academics.html" data-i18n="navAcademics">Academics</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link " href="admissions.html" data-i18n="navAdmissions">Admissions</a>
+              <a class="nav-link" href="../index.html#announcements">Announcements</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="admissions.html" data-i18n="navAdmissions">Admissions</a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link active" href="contact.html" data-i18n="navContact">Contact</a>
             </li>
 
-            <!-- Controls: Language & Theme Side by Side in 1 Clean Row -->
-            <li class="nav-item ms-lg-3 my-2 my-lg-0">
+            <!-- Action CTA: Admissions -->
+            <li class="nav-item ms-lg-2 my-1 my-lg-0">
+              <a href="admissions.html" class="btn-header-admissions">
+                <i class="fa-solid fa-graduation-cap"></i> Apply 2026-27
+              </a>
+            </li>
+
+            <!-- Action CTA: Portal Access -->
+            <li class="nav-item ms-lg-1 my-1 my-lg-0">
+              <a href="login.html" class="btn-header-portal" title="ERP Portal Access">
+                <i class="fa-solid fa-arrow-right-to-bracket text-success"></i> Portal
+              </a>
+            </li>
+
+            <!-- Controls -->
+            <li class="nav-item ms-lg-2 my-2 my-lg-0">
               <div class="site-nav-controls">
-                <!-- Language Switcher -->
                 <button class="lang-toggle-btn" onclick="window.NadwiLang.toggle()" title="Switch Language / زبان تبدیل کریں">
                   <i class="fa-solid fa-globe"></i> <span id="langBtnText">اردو</span>
                 </button>
-
-                <!-- Dark / Light Theme Toggle -->
                 <button class="theme-toggle-btn" onclick="window.NadwiUI.toggleTheme()" title="Toggle Dark/Light Mode">
                   <i id="themeToggleIcon" class="fa-solid fa-moon"></i>
                 </button>
@@ -88,12 +105,12 @@
     </nav>
   </header>
 
-  <!-- Banner -->
-  <section class="py-5" style="background: linear-gradient(135deg, #142B4A 0%, #1E3A8A 100%); color: #FFF;">
+  <!-- Banner (Emerald & Gold) -->
+  <section class="py-5" style="background: linear-gradient(135deg, #022C22 0%, #064E3B 55%, #0B5D3B 100%); color: #FFF;">
     <div class="container text-center py-3">
-      <span class="badge-nadwi badge-gold mb-2">CAMPUS INQUIRIES</span>
-      <h1 class="display-5 fw-bold text-white mb-2" data-i18n="navContact">Contact Us</h1>
-      <div class="font-urdu text-gold fs-4">رابطہ کیجیے — دفتری اوقات و ایڈریس</div>
+      <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill mb-2">CAMPUS INQUIRIES</span>
+      <h1 class="display-5 fw-bold text-white mb-2" data-i18n="navContact">Contact Campus Office</h1>
+      <div class="font-urdu text-warning fs-4">رابطہ کیجیے — دفتری اوقات و ایڈریس (ربانی فاؤنڈیشن مارول)</div>
     </div>
   </section>
 
@@ -101,109 +118,100 @@
   <section class="section-padding">
     <div class="container">
       <div class="row g-5">
-        <!-- Contact Information & Map Placeholder -->
+        <!-- Contact Information -->
         <div class="col-lg-5" data-aos="fade-right">
           <span class="section-tag">REACH OUR OFFICE</span>
           <h2 class="section-title">Get in Touch</h2>
           <p class="text-secondary">
-            Our admissions office and administrative staff are ready to assist parents and visitors with school inquiries, campus visits, and academic consultations.
+            Our admissions office and administrative staff under <strong>Rabbani Foundation Marul</strong> are ready to assist parents with school inquiries, campus visits, and academic consultations.
           </p>
 
           <div class="d-flex flex-column gap-3 mt-4">
-            <div class="d-flex align-items-start gap-3 p-3 rounded bg-light border">
-              <div class="stat-icon blue flex-shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="d-flex align-items-start gap-3 p-3 rounded-4 bg-white border shadow-sm">
+              <div class="credibility-icon flex-shrink-0"><i class="fa-solid fa-location-dot"></i></div>
               <div>
-                <h6 class="fw-bold text-navy mb-1">Campus Address</h6>
-                <p class="text-secondary small mb-0">Campus Complex, Islamic Knowledge Park, City (Demo Address Placeholder)</p>
+                <h6 class="fw-bold mb-1" style="color: var(--color-primary-dark);">Marul Campus Address</h6>
+                <p class="text-secondary small mb-0">Rabbani Foundation Complex, Marul Campus (Demo Address)</p>
               </div>
             </div>
 
-            <div class="d-flex align-items-start gap-3 p-3 rounded bg-light border">
-              <div class="stat-icon gold flex-shrink-0"><i class="fa-solid fa-phone"></i></div>
+            <div class="d-flex align-items-start gap-3 p-3 rounded-4 bg-white border shadow-sm">
+              <div class="credibility-icon gold flex-shrink-0"><i class="fa-solid fa-phone"></i></div>
               <div>
-                <h6 class="fw-bold text-navy mb-1">Phone &amp; WhatsApp</h6>
+                <h6 class="fw-bold mb-1" style="color: var(--color-primary-dark);">Phone &amp; Admissions Hotline</h6>
                 <p class="text-secondary small mb-0">+91 98765 43210 (Demo Contact Line)</p>
-                <small class="text-muted">Available Monday to Saturday, 8:00 AM – 3:30 PM</small>
+                <small class="text-muted">Monday to Saturday: 8:00 AM – 2:00 PM</small>
               </div>
             </div>
 
-            <div class="d-flex align-items-start gap-3 p-3 rounded bg-light border">
-              <div class="stat-icon green flex-shrink-0"><i class="fa-solid fa-envelope"></i></div>
+            <div class="d-flex align-items-start gap-3 p-3 rounded-4 bg-white border shadow-sm">
+              <div class="credibility-icon flex-shrink-0"><i class="fa-solid fa-envelope"></i></div>
               <div>
-                <h6 class="fw-bold text-navy mb-1">Email Inquiries</h6>
-                <p class="text-secondary small mb-0">info@nadwischool.demo / admissions@nadwischool.demo</p>
+                <h6 class="fw-bold mb-1" style="color: var(--color-primary-dark);">Email Inquiries</h6>
+                <p class="text-secondary small mb-0">info@jamianadwi.demo / admissions@jamianadwi.demo</p>
               </div>
             </div>
           </div>
 
-          <!-- Stylized Map Placeholder -->
-          <div class="mt-4 p-4 rounded text-center bg-navy text-white shadow-sm" style="border: 1px solid var(--color-gold);">
-            <i class="fa-solid fa-map-pin text-warning fs-1 mb-2 d-block"></i>
-            <h6 class="fw-bold text-white mb-1">Campus Location Map Preview</h6>
-            <p class="small text-light opacity-75 mb-0">Latitude 28.6139° N, Longitude 77.2090° E (Demo GPS Node)</p>
+          <!-- Stylized Campus Info Card -->
+          <div class="mt-4 p-4 rounded-4 text-center text-white shadow-sm" style="background: linear-gradient(135deg, #022C22, #064E3B); border: 1.5px solid var(--color-accent-gold);">
+            <i class="fa-solid fa-mosque text-warning fs-1 mb-2 d-block"></i>
+            <h6 class="fw-bold text-white mb-1">Jamia Abul Hasan Ali Nadwi</h6>
+            <p class="small text-light opacity-75 mb-0">Rabbani Foundation Marul • Nursery to 4th Standard</p>
           </div>
         </div>
 
         <!-- Interactive Contact Form -->
         <div class="col-lg-7" data-aos="fade-left">
-          <div class="dash-card">
-            <div class="dash-card-header bg-navy text-white">
-              <h5 class="dash-card-title text-white mb-0">
+          <div class="bg-white rounded-4 shadow-sm border p-4">
+            <div class="border-bottom pb-3 mb-3">
+              <h4 class="fw-bold mb-1" style="color: var(--color-primary-dark);">
                 <i class="fa-solid fa-envelope-open-text text-warning me-2"></i> Send Message to Administration
-              </h5>
+              </h4>
+              <p class="small text-muted mb-0">Have a query regarding admissions, syllabus, or school transport?</p>
             </div>
-            <div class="dash-card-body">
-              <form id="publicContactForm">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group-nadwi">
-                      <label class="form-label-nadwi">Your Name *</label>
-                      <input type="text" class="form-control-nadwi" placeholder="Full name" required value="Muhammad Farooq">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group-nadwi">
-                      <label class="form-label-nadwi">Email Address *</label>
-                      <input type="email" class="form-control-nadwi" placeholder="name@domain.com" required value="parent@demo.com">
-                    </div>
+
+            <form id="publicContactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label small fw-bold mb-1">Your Name *</label>
+                    <input type="text" class="form-control" placeholder="e.g. Tariq Mahmood" required>
                   </div>
                 </div>
-
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group-nadwi">
-                      <label class="form-label-nadwi">Contact Phone *</label>
-                      <input type="tel" class="form-control-nadwi" placeholder="03xx-xxxxxxx" required value="0300-1234567">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group-nadwi">
-                      <label class="form-label-nadwi">Inquiry Category *</label>
-                      <select class="form-control-nadwi" required>
-                        <option value="Admission Inquiry">Admission Inquiry</option>
-                        <option value="Hifz Academy Details">Hifz Academy Details</option>
-                        <option value="Fee Structure & Transport">Fee Structure &amp; Transport</option>
-                        <option value="General Query">General Query</option>
-                      </select>
-                    </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label small fw-bold mb-1">Your Mobile Phone *</label>
+                    <input type="tel" class="form-control" placeholder="+91 98765 43210" required>
                   </div>
                 </div>
+              </div>
 
-                <div class="form-group-nadwi">
-                  <label class="form-label-nadwi">Subject *</label>
-                  <input type="text" class="form-control-nadwi" placeholder="Reason for contact" required value="Admission for Grade 8 - Session 2026-27">
-                </div>
+              <div class="mb-3">
+                <label class="form-label small fw-bold mb-1">Email Address *</label>
+                <input type="email" class="form-control" placeholder="parent@example.com" required>
+              </div>
 
-                <div class="form-group-nadwi">
-                  <label class="form-label-nadwi">Message Content *</label>
-                  <textarea class="form-control-nadwi" rows="4" placeholder="Write your query in detail..." required>As-salamu alaykum, I would like to enquire about the admission test dates and syllabus for Grade 8 for my son.</textarea>
-                </div>
+              <div class="mb-3">
+                <label class="form-label small fw-bold mb-1">Inquiry Subject *</label>
+                <select class="form-select" required>
+                  <option value="">Select Topic</option>
+                  <option value="Admission Nursery to 4th">Admission Nursery to 4th</option>
+                  <option value="Syllabus & Noorani Qaida">Syllabus &amp; Noorani Qaida</option>
+                  <option value="School Van Transport">School Van Transport</option>
+                  <option value="General Campus Information">General Campus Information</option>
+                </select>
+              </div>
 
-                <button type="submit" class="btn-nadwi btn-nadwi-primary py-2 px-4">
-                  <i class="fa-solid fa-paper-plane me-1"></i> Send Invalidation Demo Message
-                </button>
-              </form>
-            </div>
+              <div class="mb-3">
+                <label class="form-label small fw-bold mb-1">Your Message *</label>
+                <textarea class="form-control" rows="4" placeholder="Write your question or message for our administrative office..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-nadwi btn-nadwi-primary py-2 px-4 w-100 fs-6">
+                <i class="fa-solid fa-paper-plane me-1"></i> Send Message
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -212,11 +220,73 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container text-center">
-      <p class="mb-1">&copy; 2026 <strong>SYED ABUL HASAN ALI NADWI</strong>. <span data-i18n="allRightsReserved">All Rights Reserved.</span></p>
-      <small class="text-muted">Strict Islamic Boys School Demo Data Policy Compliant.</small>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <span class="urdu-name">جامعہ ابوالحسن علی ندوی</span>
+            <h4>JAMIA ABUL HASAN ALI NADWI</h4>
+            <div class="text-warning fw-bold small mb-2">UNDER RABBANI FOUNDATION MARUL</div>
+            <p class="footer-desc">
+              Dedicated Islamic early childhood and foundational primary institution catering to boys from <strong>Nursery, LKG, UKG to 4th Standard</strong>. Committed to building strong foundational Arabic, Tajweed, English literacy, and moral Tarbiyah.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="../index.html"><i class="fa-solid fa-chevron-right text-success small"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right text-success small"></i> About School</a></li>
+            <li><a href="academics.html"><i class="fa-solid fa-chevron-right text-success small"></i> Academics</a></li>
+            <li><a href="faculty.html"><i class="fa-solid fa-chevron-right text-success small"></i> Faculty</a></li>
+            <li><a href="facilities.html"><i class="fa-solid fa-chevron-right text-success small"></i> Facilities</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="footer-heading">Admissions &amp; Portals</h5>
+          <ul class="footer-links">
+            <li><a href="admissions.html"><i class="fa-solid fa-chevron-right text-success small"></i> Admissions 2026-27</a></li>
+            <li><a href="events.html"><i class="fa-solid fa-chevron-right text-success small"></i> School Events</a></li>
+            <li><a href="login.html?role=admin"><i class="fa-solid fa-lock text-success small"></i> Admin Portal</a></li>
+            <li><a href="login.html?role=teacher"><i class="fa-solid fa-book text-success small"></i> Teacher Portal</a></li>
+            <li><a href="login.html?role=parent"><i class="fa-solid fa-users text-success small"></i> Parent Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-heading">Marul Campus Office</h5>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Rabbani Foundation Complex, Marul Campus</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 98765 43210 (Demo Contact)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@jamianadwi.demo</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Mon - Sat: 8:00 AM - 2:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 <strong>JAMIA ABUL HASAN ALI NADWI</strong> (Rabbani Foundation Marul). All Rights Reserved.</div>
+        <div class="text-warning"><i class="fa-solid fa-shield-halved"></i> Institutional School Management ERP</div>
+      </div>
     </div>
   </footer>
+
+  <!-- Floating Scroll-To-Top Button -->
+  <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Back to Top / اوپر جائیں" aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -228,4 +298,3 @@
   <script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>
-

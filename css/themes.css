@@ -116,15 +116,23 @@
    2. DARK THEME MODE (Zero Harsh Blue Text & High Contrast Legibility)
    ========================================================================== */
 [data-theme="dark"] {
-  --color-bg: #09121F;
-  --color-bg-card: #0F1D33;
-  --color-white: #0F1D33;
+  --color-primary: #34D399;
+  --color-primary-dark: #F8FAF9;
+  --color-primary-light: #6EE7B7;
+  --color-secondary: #10B981;
+  --color-bg-main: #061A14;
+  --color-bg-soft: #0B251D;
+  --color-bg-card: #0D2E24;
+  --color-bg-tint: #134033;
+  --color-bg: #061A14;
+  --color-white: #0D2E24;
   --color-main-text: #F1F5F9;
   --color-secondary-text: #CBD5E1;
-  --color-border: #1E2E4A;
-  --color-light-blue: #14243D;
-  --color-royal-blue: #34D399; /* Mint Green instead of blue in Dark Mode */
-  --color-deep-navy: #F8FAFC;  /* Crisp Off-White for headers instead of dark navy */
+  --color-border: #1B4D3E;
+  --color-border-subtle: rgba(52, 211, 153, 0.2);
+  --color-light-blue: #134033;
+  --color-royal-blue: #34D399; /* Mint Green in Dark Mode */
+  --color-deep-navy: #F8FAF9;  /* Crisp Off-White for headers in Dark Mode */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6);

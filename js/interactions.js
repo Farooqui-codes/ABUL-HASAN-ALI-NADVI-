@@ -151,7 +151,7 @@ class NadwiInteractions {
       if ('caches' in window) {
         caches.keys().then((keys) => {
           keys.forEach(key => {
-            if (key !== 'nadwi-erp-v3') caches.delete(key);
+            if (key !== 'nadwi-erp-v4') caches.delete(key);
           });
         });
       }

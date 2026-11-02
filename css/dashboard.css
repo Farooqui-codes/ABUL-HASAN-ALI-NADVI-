@@ -485,7 +485,7 @@
 
 /* Dashboard Welcome Banner */
 .dashboard-welcome-banner {
-  background: linear-gradient(135deg, var(--color-deep-navy) 0%, #1E3A8A 100%);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, var(--color-primary-light) 100%);
   border-radius: var(--radius-lg);
   color: #FFFFFF;
   padding: 1.75rem 2rem;

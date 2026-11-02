@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SYED ABUL HASAN ALI NADWI — Islamic School Management ERP</title>
+  <title>JAMIA ABUL HASAN ALI NADWI — Islamic Primary Education & School ERP</title>
   
   <!-- Favicon / Logo Mark -->
   <link rel="icon" type="image/svg+xml" href="assets/logo/logo-mark.svg">
@@ -29,25 +29,26 @@
 </head>
 <body>
 
-  <!-- Header / Navbar (Clean, Modern & Spacious) -->
+  <!-- Header / Navbar (Clean, Sticky & High-Prestige) -->
   <header class="site-header">
     <nav class="navbar navbar-expand-lg py-2">
       <div class="container">
         <!-- Brand Logo & School Names -->
         <a class="navbar-brand-wrap" href="index.html">
-          <img src="assets/logo/official-logo.png" alt="Jamia Abul Hasan Ali Nadwi Logo" height="52" class="me-2">
+          <img src="assets/logo/official-logo.png" alt="Jamia Abul Hasan Ali Nadwi Logo" height="50">
           <div class="brand-title-wrap">
-            <span class="brand-title-urdu" style="font-size: 1.05rem;">جامعہ ابوالحسن علی ندوی</span>
-            <span class="brand-title-en" style="font-size: 0.75rem;">JAMIA ABUL HASAN ALI NADWI</span>
+            <span class="brand-title-urdu">جامعہ ابوالحسن علی ندوی</span>
+            <span class="brand-title-en">JAMIA ABUL HASAN ALI NADWI</span>
+            <small class="brand-title-sub">RABBANI FOUNDATION MARUL</small>
           </div>
         </a>
 
         <!-- Mobile Toggler -->
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#publicNav" aria-label="Toggle navigation">
-          <i class="fa-solid fa-bars fs-2 text-primary"></i>
+          <i class="fa-solid fa-bars fs-2 text-success"></i>
         </button>
 
-        <!-- Ultra-Clean Nav Items -->
+        <!-- Nav Items & Action Group -->
         <div class="collapse navbar-collapse" id="publicNav">
           <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
@@ -60,14 +61,19 @@
                 About Us
               </a>
               <ul class="dropdown-menu animate-fade-in-down" aria-labelledby="aboutDropdown">
-                <li><a class="dropdown-item" href="pages/about.html"><i class="fa-solid fa-school me-2"></i> About &amp; Philosophy</a></li>
-                <li><a class="dropdown-item" href="pages/faculty.html"><i class="fa-solid fa-chalkboard-user me-2"></i> Faculty &amp; Asatizah</a></li>
-                <li><a class="dropdown-item" href="pages/facilities.html"><i class="fa-solid fa-building me-2"></i> Campus &amp; Facilities</a></li>
+                <li><a class="dropdown-item" href="pages/about.html"><i class="fa-solid fa-school text-success me-2"></i> About &amp; Philosophy</a></li>
+                <li><a class="dropdown-item" href="pages/faculty.html"><i class="fa-solid fa-chalkboard-user text-success me-2"></i> Faculty &amp; Asatizah</a></li>
+                <li><a class="dropdown-item" href="pages/facilities.html"><i class="fa-solid fa-building text-success me-2"></i> Campus &amp; Facilities</a></li>
+                <li><a class="dropdown-item" href="pages/events.html"><i class="fa-solid fa-calendar-days text-success me-2"></i> Events &amp; Activities</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="pages/academics.html" data-i18n="navAcademics">Academics</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#announcements">Announcements</a>
             </li>
 
             <li class="nav-item">
@@ -78,8 +84,22 @@
               <a class="nav-link" href="pages/contact.html" data-i18n="navContact">Contact</a>
             </li>
 
-            <!-- Controls: Language & Theme Side by Side in 1 Clean Row -->
-            <li class="nav-item ms-lg-3 my-2 my-lg-0">
+            <!-- Action CTA: Admissions -->
+            <li class="nav-item ms-lg-2 my-1 my-lg-0">
+              <a href="pages/admissions.html" class="btn-header-admissions">
+                <i class="fa-solid fa-graduation-cap"></i> Apply 2026-27
+              </a>
+            </li>
+
+            <!-- Action CTA: Portal Access -->
+            <li class="nav-item ms-lg-1 my-1 my-lg-0">
+              <a href="pages/login.html" class="btn-header-portal" title="ERP Portal Access">
+                <i class="fa-solid fa-arrow-right-to-bracket text-success"></i> Portal
+              </a>
+            </li>
+
+            <!-- Inline Language & Theme Controls -->
+            <li class="nav-item ms-lg-2 my-2 my-lg-0">
               <div class="site-nav-controls">
                 <!-- Language Switcher -->
                 <button class="lang-toggle-btn" onclick="window.NadwiLang.toggle()" title="Switch Language / زبان تبدیل کریں">
@@ -99,88 +119,116 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero-section">
+  <section class="hero-section" id="hero">
     <div class="container position-relative">
-      <div class="row align-items-center">
+      <div class="row align-items-center g-4">
         <div class="col-lg-7" data-aos="fade-right">
-          <div class="hero-subtitle-badge">
-            <i class="fa-solid fa-star text-warning"></i>
-            <span>RABBANI FOUNDATION MARUL • NURSERY TO 4TH STANDARD</span>
+          <div class="hero-eyebrow">
+            <i class="fa-solid fa-landmark"></i>
+            <span>RABBANI FOUNDATION MARUL</span>
           </div>
+          
           <span class="hero-urdu-title">جامعہ ابوالحسن علی ندوی</span>
+          
           <h1 class="hero-title">
-            Nurturing Young Minds with Sacred Faith &amp; <span class="gold-text">Primary Academic Excellence</span>
+            Nurturing Young Minds with Sacred Faith &amp; <span class="gold-text">Academic Excellence</span>
           </h1>
+          
           <p class="hero-desc">
-            Operating under <strong>Rabbani Foundation Marul</strong>, Jamia Abul Hasan Ali Nadwi provides an exemplary Islamic foundation for early childhood and primary boys (Nursery, LKG, UKG to 4th Standard), blending Noorani Qaida, Tajweed, English Phonics, and Mathematics. Higher classes (5th to 10th) are scheduled in future academic phases.
+            Operating under <strong>Rabbani Foundation Marul</strong>, Jamia Abul Hasan Ali Nadwi provides an exemplary Islamic foundation for early childhood and primary boys (Nursery, LKG, UKG to 4th Standard), blending Noorani Qaida, Tajweed, English Phonics, Mathematics, and Sunnah character development.
           </p>
 
           <div class="hero-actions">
             <a href="pages/admissions.html" class="btn-nadwi btn-nadwi-gold">
-              <i class="fa-solid fa-clipboard-check"></i> Nursery - 4th Admissions
+              <i class="fa-solid fa-clipboard-check"></i> Explore Admissions
             </a>
-            <a href="pages/login.html" class="btn-nadwi btn-nadwi-outline text-white border-white">
-              <i class="fa-solid fa-laptop-code"></i> Explore ERP Dashboards
+            <a href="#overview" class="btn-nadwi btn-nadwi-outline-white">
+              <i class="fa-solid fa-compass"></i> Discover Our School
             </a>
           </div>
 
-          <!-- Strict Islamic School Male-Only Badge & Grade Levels -->
-          <div class="mt-4 pt-2 d-flex gap-2 flex-wrap">
-            <span class="badge-nadwi badge-gold">
-              <i class="fa-solid fa-shield-check"></i> Dedicated Boys Primary Campus
+          <!-- Grade Level Badges -->
+          <div class="hero-badges-row">
+            <span class="hero-badge-pill">
+              <i class="fa-solid fa-shield-halved text-warning"></i> Dedicated Boys Primary Campus
             </span>
-            <span class="badge-nadwi badge-blue text-white" style="background: rgba(255,255,255,0.2);">
-              <i class="fa-solid fa-award text-warning"></i> Nursery, LKG, UKG, Class 1 to 4th Standard
+            <span class="hero-badge-pill">
+              <i class="fa-solid fa-award text-warning"></i> Nursery, LKG, UKG &amp; Classes 1st to 4th
             </span>
           </div>
         </div>
 
-        <div class="col-lg-5 text-center mt-4 mt-lg-0" data-aos="fade-left">
-          <div class="hero-image-wrap">
-            <img src="assets/images/hero-illustration.svg" alt="Islamic School Education Hero Graphic">
+        <div class="col-lg-5 text-center" data-aos="fade-left">
+          <div class="hero-emblem-card">
+            <img src="assets/logo/official-logo.png" alt="Jamia Abul Hasan Ali Nadwi Official Emblem" class="hero-emblem-img">
+            <h5 class="fw-bold text-white mb-1">جامعہ ابوالحسن علی ندوی</h5>
+            <small class="text-warning fw-semibold letter-spacing-1 d-block mb-3">RABBANI FOUNDATION MARUL</small>
+            
+            <div class="hero-emblem-features">
+              <div class="hero-feature-item">
+                <i class="fa-solid fa-book-quran"></i>
+                <span>Noorani Qaida &amp; Tajweed Foundation</span>
+              </div>
+              <div class="hero-feature-item">
+                <i class="fa-solid fa-language"></i>
+                <span>English Phonics &amp; Primary Literacy</span>
+              </div>
+              <div class="hero-feature-item">
+                <i class="fa-solid fa-shield-heart"></i>
+                <span>Sunnah Adab &amp; Moral Tarbiyah</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Key Stats Bar -->
-  <div class="container">
-    <div class="stats-bar-section" data-aos="fade-up">
-      <div class="row g-4 text-center text-md-start">
-        <div class="col-6 col-md-3">
-          <div class="stat-item justify-content-center justify-content-md-start">
-            <div class="stat-icon blue"><i class="fa-solid fa-graduation-cap"></i></div>
+  <!-- Verified Institutional Credibility Pillars (Replaces zero-valued statistics) -->
+  <div class="container credibility-section">
+    <div class="credibility-card-wrap" data-aos="fade-up">
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-3">
+          <div class="credibility-item">
+            <div class="credibility-icon gold">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
             <div>
-              <div class="stat-number counter-value" data-target="245">0</div>
-              <div class="stat-label">Primary Boys Enrolled</div>
+              <div class="credibility-title">Rabbani Foundation</div>
+              <p class="credibility-desc">Non-Profit Institutional Governance &amp; Community Trust</p>
             </div>
           </div>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="stat-item justify-content-center justify-content-md-start">
-            <div class="stat-icon gold"><i class="fa-solid fa-user-tie"></i></div>
+        <div class="col-md-6 col-lg-3">
+          <div class="credibility-item">
+            <div class="credibility-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
             <div>
-              <div class="stat-number counter-value" data-target="18">0</div>
-              <div class="stat-label">Scholars &amp; Teachers</div>
+              <div class="credibility-title">Nursery to 4th Grade</div>
+              <p class="credibility-desc">Dedicated Early Childhood &amp; Foundational Primary Campus</p>
             </div>
           </div>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="stat-item justify-content-center justify-content-md-start">
-            <div class="stat-icon green"><i class="fa-solid fa-book"></i></div>
+        <div class="col-md-6 col-lg-3">
+          <div class="credibility-item">
+            <div class="credibility-icon gold">
+              <i class="fa-solid fa-book-quran"></i>
+            </div>
             <div>
-              <div class="stat-number">NUR - 4TH</div>
-              <div class="stat-label">Active Grade Standards</div>
+              <div class="credibility-title">Dual Integrated Core</div>
+              <p class="credibility-desc">Sacred Quranic Nazira Combined with English &amp; Mathematics</p>
             </div>
           </div>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="stat-item justify-content-center justify-content-md-start">
-            <div class="stat-icon navy"><i class="fa-solid fa-award"></i></div>
+        <div class="col-md-6 col-lg-3">
+          <div class="credibility-item">
+            <div class="credibility-icon">
+              <i class="fa-solid fa-hands-holding-child"></i>
+            </div>
             <div>
-              <div class="stat-number counter-value" data-target="100">0</div>
-              <div class="stat-label">% Foundational Pass Rate</div>
+              <div class="credibility-title">Focused Small Batches</div>
+              <p class="credibility-desc">Individual Moral Tarbiyah, Daily Sunnah &amp; Discipline</p>
             </div>
           </div>
         </div>
@@ -188,90 +236,90 @@
     </div>
   </div>
 
-  <!-- Educational Pillars Section -->
-  <section class="section-padding">
+  <!-- Academic Curriculum Section (The Nadwi Educational Philosophy) -->
+  <section class="section-padding" id="overview">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <span class="section-tag">OUR ACADEMIC CURRICULUM</span>
         <h2 class="section-title">The Nadwi Educational Philosophy</h2>
-        <p class="section-subtitle">A balanced curriculum integrating sacred traditional Islamic sciences with modern curriculum prescribed for secondary and higher secondary boards.</p>
+        <p class="section-subtitle">A balanced foundational curriculum harmonizing sacred Quranic sciences with modern primary education prescribed for junior learners.</p>
       </div>
 
       <div class="row g-4">
         <!-- Pillar 1 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card">
-            <div class="feature-icon-wrap" style="background:#ECFDF5; color:#0F5132;">
-              <i class="fa-solid fa-book"></i>
+          <div class="curriculum-card">
+            <div class="curriculum-icon-wrap">
+              <i class="fa-solid fa-book-quran"></i>
             </div>
-            <h4 class="feature-title">Noorani Qaida &amp; Nazira</h4>
-            <p class="feature-desc">Correct pronunciation (Makharij) and Tajweed rules taught patiently from Nursery and KG through Class 4, instilling deep love for the Quran.</p>
-            <a href="pages/academics.html" class="fw-bold small">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            <h4 class="curriculum-title">Noorani Qaida &amp; Nazira</h4>
+            <p class="curriculum-desc">Correct pronunciation (Makharij) and Tajweed rules taught patiently from Nursery and KG through Class 4, instilling deep love for the Holy Quran.</p>
+            <a href="pages/academics.html" class="curriculum-action">Learn More <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
 
         <!-- Pillar 2 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card">
-            <div class="feature-icon-wrap" style="background:#FEF3C7; color:#B45309;">
+          <div class="curriculum-card">
+            <div class="curriculum-icon-wrap">
               <i class="fa-solid fa-language"></i>
             </div>
-            <h4 class="feature-title">English &amp; Phonics</h4>
-            <p class="feature-desc">Modern phonetic reading, vocabulary enrichment, spelling bees, and confident conversational skills for junior grades.</p>
-            <a href="pages/academics.html" class="fw-bold small">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            <h4 class="curriculum-title">English &amp; Phonics</h4>
+            <p class="curriculum-desc">Phonetic sound recognition, structured reading habits, vocabulary expansion, neat handwriting, and conversational confidence.</p>
+            <a href="pages/academics.html" class="curriculum-action">Learn More <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
 
         <!-- Pillar 3 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature-card">
-            <div class="feature-icon-wrap" style="background:#E0E7FF; color:#4338CA;">
+          <div class="curriculum-card">
+            <div class="curriculum-icon-wrap">
               <i class="fa-solid fa-calculator"></i>
             </div>
-            <h4 class="feature-title">Primary Math &amp; EVS</h4>
-            <p class="feature-desc">Mental arithmetic, basic geometry, science curiosity, and Environmental Studies (EVS) with engaging visual activity books.</p>
-            <a href="pages/academics.html" class="fw-bold small">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            <h4 class="curriculum-title">Primary Math &amp; EVS</h4>
+            <p class="curriculum-desc">Mental arithmetic, basic geometry, curiosity-driven science, and Environmental Studies (EVS) with engaging visual activity books.</p>
+            <a href="pages/academics.html" class="curriculum-action">Learn More <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
 
         <!-- Pillar 4 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-          <div class="feature-card">
-            <div class="feature-icon-wrap" style="background:#DCFCE7; color:#16A34A;">
+          <div class="curriculum-card">
+            <div class="curriculum-icon-wrap">
               <i class="fa-solid fa-shield-heart"></i>
             </div>
-            <h4 class="feature-title">Daily Sunnah &amp; Adab</h4>
-            <p class="feature-desc">Masnoon Duas, manners of eating, greeting with Salam, obedience to parents, and cultivating gentle, upright Islamic character.</p>
-            <a href="pages/academics.html" class="fw-bold small">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            <h4 class="curriculum-title">Daily Sunnah &amp; Adab</h4>
+            <p class="curriculum-desc">Daily Masnoon Duas, table manners, greeting with Salam, kindness to elders, truthfulness, and cultivating righteous Islamic character.</p>
+            <a href="pages/academics.html" class="curriculum-action">Learn More <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Principal's Message Section -->
+  <!-- Principal's Message Section (Editorial Dignity) -->
   <section class="section-padding principal-section">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row align-items-center g-4">
         <div class="col-lg-4 text-center mb-4 mb-lg-0" data-aos="fade-right">
           <div class="principal-avatar-wrap">
             <img src="assets/avatars/male-admin.svg" alt="Principal Portrait">
-            <h4 class="fw-bold text-navy mb-1">Dr. Muhammad Usman</h4>
-            <p class="text-gold fw-bold mb-0">Principal &amp; Senior Scholar</p>
-            <small class="text-muted">Ph.D. Islamic Studies, Alim (Nadwatul Ulama)</small>
+            <h4 class="fw-bold mb-1" style="color: var(--color-primary-dark);">Dr. Muhammad Usman</h4>
+            <p class="fw-bold mb-1" style="color: var(--color-accent-gold-dark);">Headmaster &amp; Academic Director</p>
+            <small class="text-muted">M.A., Alim (Nadwatul Ulama)</small>
           </div>
         </div>
 
         <div class="col-lg-8" data-aos="fade-left">
           <div class="principal-card">
-            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-            <h3 class="fw-bold text-navy mb-3">Nurturing Intellectual Depth &amp; Spiritual Purity</h3>
+            <div class="principal-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+            <h3 class="fw-bold mb-3" style="color: var(--color-primary-dark);">Nurturing Spiritual Purity &amp; Foundational Excellence</h3>
             <p class="principal-quote">
-              "Knowledge without God-consciousness is hollow, while faith without intellectual vigor remains incomplete. At Syed Abul Hasan Ali Nadwi Islamic School, our mission is to revive the holistic Muslim personality—a young man who excels in modern scientific inquiry while embodying the humility and moral fortitude taught by the Beloved Prophet Muhammad (PBUH)."
+              "The early childhood and primary years are the most critical period in shaping a child's faith, intellect, and character. At Jamia Abul Hasan Ali Nadwi under Rabbani Foundation Marul, we ensure that every young student absorbs the reverence of the Holy Quran, fluent Arabic recitation, and strong English and mathematical literacy—all within a warm, disciplined Islamic environment."
             </p>
-            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
-              <span class="badge-nadwi badge-gold"><i class="fa-solid fa-award"></i> Dedicated to Islamic &amp; Modern Renaissance</span>
-              <a href="pages/about.html" class="btn-nadwi btn-nadwi-outline btn-nadwi-sm">Read Institutional History</a>
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 pt-2 border-top">
+              <span class="badge-nadwi badge-gold"><i class="fa-solid fa-award"></i> Dedicated Boys Primary Campus (Nursery to 4th)</span>
+              <a href="pages/about.html" class="btn-nadwi btn-nadwi-outline btn-nadwi-sm">Read Institutional Philosophy</a>
             </div>
           </div>
         </div>
@@ -279,37 +327,155 @@
     </div>
   </section>
 
-  <!-- Facilities Preview -->
+  <!-- Campus Infrastructure & Facilities -->
   <section class="section-padding">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">CAMPUS INFRASTRUCTURE</span>
-        <h2 class="section-title">World-Class Facilities for Holistic Growth</h2>
-        <p class="section-subtitle">A serene educational sanctuary built with traditional Islamic architecture and modern technology.</p>
+        <span class="section-tag">CAMPUS FACILITIES</span>
+        <h2 class="section-title">Enriching Learning Environment</h2>
+        <p class="section-subtitle">Dedicated, safe facilities purposefully designed for junior boys' early childhood and primary development.</p>
       </div>
 
       <div class="row g-4">
+        <!-- Facility 1: Library -->
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="feature-card">
-            <img src="assets/images/library-illustration.svg" alt="Central Library" class="img-fluid rounded mb-3">
-            <h4 class="feature-title">Research Library</h4>
-            <p class="feature-desc">Over 15,000 classic Islamic manuscripts, Tafseer volumes, scientific encyclopedias, and high-speed digital research terminals.</p>
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="assets/images/library-illustration.svg" alt="Junior Islamic Library">
+            </div>
+            <div class="facility-body">
+              <h4 class="facility-title"><i class="fa-solid fa-book-open-reader text-success me-2"></i>Junior Reading Library</h4>
+              <p class="facility-desc">Age-appropriate stories of the Prophets, illustrated moral readers, Noorani Qaida study aids, and junior Arabic picture dictionaries.</p>
+            </div>
           </div>
         </div>
 
+        <!-- Facility 2: Musalla -->
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="feature-card">
-            <img src="assets/images/prayer-hall.svg" alt="Grand Musalla" class="img-fluid rounded mb-3">
-            <h4 class="feature-title">Campus Musalla</h4>
-            <p class="feature-desc">Spacious congregational prayer hall hosting five daily prayers, Jum'ah congregations, and weekly spiritual lectures.</p>
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="assets/images/prayer-hall.svg" alt="Campus Musalla">
+            </div>
+            <div class="facility-body">
+              <h4 class="facility-title"><i class="fa-solid fa-mosque text-success me-2"></i>Campus Musalla</h4>
+              <p class="facility-desc">Calm prayer sanctuary where students practice daily congregational Wudhu, learn prayer postures, and recite daily Sunnah Duas.</p>
+            </div>
           </div>
         </div>
 
+        <!-- Facility 3: Activity & Classrooms -->
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-          <div class="feature-card">
-            <img src="assets/images/science-lab.svg" alt="STEM Laboratories" class="img-fluid rounded mb-3">
-            <h4 class="feature-title">Science &amp; Computer Labs</h4>
-            <p class="feature-desc">Equipped with physics apparatus, chemical safety hoods, biological specimen slides, and advanced computer systems.</p>
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="assets/images/science-lab.svg" alt="Learning Activity Hall">
+            </div>
+            <div class="facility-body">
+              <h4 class="facility-title"><i class="fa-solid fa-laptop text-success me-2"></i>Activity &amp; Computer Hall</h4>
+              <p class="facility-desc">Interactive phonics listening stations, safe basic computer orientation, and visual arithmetic kits for early grade exploration.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions 2026-27 Roadmap & Fast Enquiry -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="admissions-banner-section" data-aos="fade-up">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-3">
+              <i class="fa-solid fa-bell me-1"></i> ADMISSION OPEN 2026–27
+            </span>
+            <h2 class="display-6 fw-bold text-white mb-2">Enroll Your Child at Jamia Nadwi</h2>
+            <p class="lead text-light mb-4" style="font-size: 1rem;">
+              Currently accepting applications for <strong>Nursery, LKG, UKG, and Classes 1st to 4th</strong>. Limited batch sizes ensure focused personal attention and moral Tarbiyah.
+            </p>
+
+            <div class="row g-2 mb-4">
+              <div class="col-6 col-sm-3">
+                <div class="step-box">
+                  <div class="step-num">1</div>
+                  <div class="step-title">Enquiry</div>
+                  <p class="step-desc">Submit details online or visit</p>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="step-box">
+                  <div class="step-num">2</div>
+                  <div class="step-title">Visit</div>
+                  <p class="step-desc">Campus tour &amp; meeting</p>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="step-box">
+                  <div class="step-num">3</div>
+                  <div class="step-title">Documents</div>
+                  <p class="step-desc">Birth certificate &amp; ID</p>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="step-box">
+                  <div class="step-num">4</div>
+                  <div class="step-title">Welcome</div>
+                  <p class="step-desc">Confirmation &amp; kit</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="pages/admissions.html" class="btn-nadwi btn-nadwi-gold">
+                <i class="fa-solid fa-file-signature"></i> Complete Online Application
+              </a>
+              <a href="pages/contact.html" class="btn-nadwi btn-nadwi-outline-white">
+                <i class="fa-solid fa-phone"></i> Contact Campus Office
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="bg-white text-dark p-4 rounded-4 shadow">
+              <h4 class="fw-bold mb-1" style="color: var(--color-primary-dark);">Fast Admission Enquiry</h4>
+              <p class="small text-muted mb-3">Our admissions office will contact you within 24 hours.</p>
+              
+              <form id="fastEnquiryForm" onsubmit="event.preventDefault(); window.submitFastEnquiry();">
+                <div class="mb-2">
+                  <label class="form-label small fw-bold mb-1">Student Full Name *</label>
+                  <input type="text" id="enqStudentName" class="form-control form-control-sm" placeholder="e.g. Muhammad Abdullah" required>
+                </div>
+                <div class="mb-2">
+                  <label class="form-label small fw-bold mb-1">Father / Guardian Name *</label>
+                  <input type="text" id="enqFatherName" class="form-control form-control-sm" placeholder="e.g. Ibrahim Khan" required>
+                </div>
+                <div class="row g-2 mb-2">
+                  <div class="col-6">
+                    <label class="form-label small fw-bold mb-1">Class Applied *</label>
+                    <select id="enqClass" class="form-select form-select-sm" required>
+                      <option value="">Select Grade</option>
+                      <option value="Nursery">Nursery</option>
+                      <option value="LKG">LKG</option>
+                      <option value="UKG">UKG</option>
+                      <option value="Class 1">Class 1</option>
+                      <option value="Class 2">Class 2</option>
+                      <option value="Class 3">Class 3</option>
+                      <option value="Class 4">Class 4</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label small fw-bold mb-1">Mobile Number *</label>
+                    <input type="tel" id="enqPhone" class="form-control form-control-sm" placeholder="+91 9876543210" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label small fw-bold mb-1">Message / Question (Optional)</label>
+                  <textarea id="enqMessage" class="form-control form-control-sm" rows="2" placeholder="Any question regarding curriculum or transport..."></textarea>
+                </div>
+                <button type="submit" class="btn-nadwi btn-nadwi-primary w-100 py-2">
+                  <i class="fa-solid fa-paper-plane"></i> Submit Admission Enquiry
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -317,55 +483,90 @@
   </section>
 
   <!-- Public Notices & News -->
-  <section class="section-padding bg-light">
+  <section class="section-padding" id="announcements">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <span class="section-tag">LATEST UPDATES</span>
         <h2 class="section-title" data-i18n="recentNotices">Recent Announcements</h2>
-        <p class="section-subtitle">Stay updated with academic notices, examination schedules, and institutional events.</p>
+        <p class="section-subtitle">Stay updated with academic notices, exam dates, and official institutional announcements.</p>
       </div>
 
-      <div class="row" id="publicNoticesList">
+      <div class="row g-4" id="publicNoticesList">
         <!-- Rendered dynamically by js/main.js -->
       </div>
     </div>
   </section>
 
-  <!-- Role-Based ERP Showcase / CTA Section -->
-  <section class="section-padding" style="background: linear-gradient(135deg, #142B4A 0%, #1E3A8A 100%); color:#FFFFFF;">
+  <!-- Role-Based ERP Portal Access Section -->
+  <section class="section-padding erp-showcase-section">
     <div class="container text-center">
-      <span class="badge-nadwi badge-gold mb-3">ENTERPRISE SAAS SYSTEM</span>
-      <h2 class="display-6 fw-bold text-white mb-3">Experience the School Management ERP</h2>
-      <p class="lead text-light max-w-700 mx-auto mb-4" style="max-width: 650px;">
-        Four dedicated, password-protected role dashboards with live data management, attendance, fee generation, student report cards, and parent communication.
+      <span class="section-tag mb-2">INTEGRATED ERP SUITE</span>
+      <h2 class="section-title mb-2">School Management Portals</h2>
+      <p class="section-subtitle max-w-700 mx-auto mb-4" style="max-width: 650px;">
+        Four secure, role-based dashboards managing live student records, academic reports, fee collections, and parent communication.
       </p>
 
-      <div class="row g-3 justify-content-center mb-4">
-        <div class="col-6 col-md-3">
-          <a href="pages/login.html?role=admin" class="btn-nadwi btn-nadwi-gold w-100">
-            <i class="fa-solid fa-shield-halved"></i> Admin Portal
-          </a>
+      <div class="row g-4 justify-content-center">
+        <!-- Admin -->
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="role-portal-card">
+            <div class="role-icon-box">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4>Administrator</h4>
+            <p>Overall school administration, student admissions, fee vouchers, and staff management.</p>
+            <a href="pages/login.html?role=admin" class="btn-nadwi btn-nadwi-primary btn-nadwi-sm w-100">
+              <i class="fa-solid fa-lock me-1"></i> Admin Portal
+            </a>
+          </div>
         </div>
-        <div class="col-6 col-md-3">
-          <a href="pages/login.html?role=teacher" class="btn-nadwi btn-nadwi-outline text-white border-white w-100">
-            <i class="fa-solid fa-chalkboard-user"></i> Teacher Portal
-          </a>
+
+        <!-- Teacher -->
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="role-portal-card">
+            <div class="role-icon-box">
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+            <h4>Teacher Portal</h4>
+            <p>Daily student attendance, grading Noorani Qaida progress, and curriculum tracking.</p>
+            <a href="pages/login.html?role=teacher" class="btn-nadwi btn-nadwi-outline btn-nadwi-sm w-100">
+              <i class="fa-solid fa-book me-1"></i> Teacher Portal
+            </a>
+          </div>
         </div>
-        <div class="col-6 col-md-3">
-          <a href="pages/login.html?role=student" class="btn-nadwi btn-nadwi-outline text-white border-white w-100">
-            <i class="fa-solid fa-school"></i> Student Portal
-          </a>
+
+        <!-- Student -->
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="role-portal-card">
+            <div class="role-icon-box">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <h4>Student Portal</h4>
+            <p>Review class timetable, view report cards, practice Quranic quizzes, and borrow books.</p>
+            <a href="pages/login.html?role=student" class="btn-nadwi btn-nadwi-outline btn-nadwi-sm w-100">
+              <i class="fa-solid fa-graduation-cap me-1"></i> Student Portal
+            </a>
+          </div>
         </div>
-        <div class="col-6 col-md-3">
-          <a href="pages/login.html?role=parent" class="btn-nadwi btn-nadwi-outline text-white border-white w-100">
-            <i class="fa-solid fa-users"></i> Parent Portal
-          </a>
+
+        <!-- Parent -->
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="role-portal-card">
+            <div class="role-icon-box">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h4>Parent Portal</h4>
+            <p>Track child's daily attendance, view fee receipts, and communicate with Asatizah.</p>
+            <a href="pages/login.html?role=parent" class="btn-nadwi btn-nadwi-outline btn-nadwi-sm w-100">
+              <i class="fa-solid fa-user-check me-1"></i> Parent Portal
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer (Balanced Institutional 4-Column Layout) -->
   <footer class="site-footer">
     <div class="container">
       <div class="row g-4">
@@ -374,9 +575,9 @@
           <div class="footer-brand">
             <span class="urdu-name">جامعہ ابوالحسن علی ندوی</span>
             <h4>JAMIA ABUL HASAN ALI NADWI</h4>
-            <div class="text-gold fw-bold small mb-2">UNDER RABBANI FOUNDATION MARUL</div>
+            <div class="text-warning fw-bold small mb-2">UNDER RABBANI FOUNDATION MARUL</div>
             <p class="footer-desc">
-              Dedicated Islamic early childhood and primary institution catering to boys from <strong>Nursery, LKG, UKG to 4th Standard</strong>. Committed to building strong foundational Arabic, Tajweed, English literacy, and moral tarbiyah. Secondary grade levels (5th–10th) planned in future development phases.
+              Dedicated Islamic early childhood and foundational primary institution catering to boys from <strong>Nursery, LKG, UKG to 4th Standard</strong>. Committed to building strong foundational Arabic, Tajweed, English literacy, and moral Tarbiyah.
             </p>
             <div class="badge-nadwi badge-gold">
               <i class="fa-solid fa-shield-check"></i> Fictional Demo Data Policy Compliant
@@ -384,32 +585,31 @@
           </div>
         </div>
 
-        <!-- Col 2: Quick Links -->
+        <!-- Col 2: Navigation -->
         <div class="col-6 col-lg-2">
           <h5 class="footer-heading">Navigation</h5>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/about.html">About School</a></li>
-            <li><a href="pages/academics.html">Nursery - 4th</a></li>
-            <li><a href="pages/faculty.html">Teachers</a></li>
-            <li><a href="pages/admissions.html">Admissions</a></li>
-            <li><a href="pages/contact.html">Contact Us</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right text-success small"></i> Home</a></li>
+            <li><a href="pages/about.html"><i class="fa-solid fa-chevron-right text-success small"></i> About School</a></li>
+            <li><a href="pages/academics.html"><i class="fa-solid fa-chevron-right text-success small"></i> Academic Curriculum</a></li>
+            <li><a href="pages/faculty.html"><i class="fa-solid fa-chevron-right text-success small"></i> Faculty &amp; Asatizah</a></li>
+            <li><a href="pages/facilities.html"><i class="fa-solid fa-chevron-right text-success small"></i> Campus &amp; Facilities</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: ERP Dashboards -->
+        <!-- Col 3: Admissions & Portals -->
         <div class="col-6 col-lg-3">
-          <h5 class="footer-heading">ERP Dashboards</h5>
+          <h5 class="footer-heading">Admissions &amp; Portals</h5>
           <ul class="footer-links">
-            <li><a href="pages/login.html?role=admin"><i class="fa-solid fa-lock"></i> Administrator Dashboard</a></li>
-            <li><a href="pages/login.html?role=teacher"><i class="fa-solid fa-book"></i> Teacher Dashboard</a></li>
-            <li><a href="pages/login.html?role=student"><i class="fa-solid fa-graduation-cap"></i> Student Dashboard</a></li>
-            <li><a href="pages/login.html?role=parent"><i class="fa-solid fa-users"></i> Parent Dashboard</a></li>
-            <li><a href="pages/facilities.html"><i class="fa-solid fa-school"></i> Junior Campus &amp; Labs</a></li>
+            <li><a href="pages/admissions.html"><i class="fa-solid fa-chevron-right text-success small"></i> Admissions 2026-27</a></li>
+            <li><a href="pages/events.html"><i class="fa-solid fa-chevron-right text-success small"></i> School Events</a></li>
+            <li><a href="pages/login.html?role=admin"><i class="fa-solid fa-lock text-success small"></i> Administrator Portal</a></li>
+            <li><a href="pages/login.html?role=teacher"><i class="fa-solid fa-book text-success small"></i> Teacher Portal</a></li>
+            <li><a href="pages/login.html?role=parent"><i class="fa-solid fa-users text-success small"></i> Parent Portal</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Contact Placeholder -->
+        <!-- Col 4: Campus Office -->
         <div class="col-lg-3">
           <h5 class="footer-heading">Marul Campus Office</h5>
           <div class="footer-contact-item">
@@ -434,16 +634,21 @@
       <!-- Bottom Bar -->
       <div class="footer-bottom">
         <div>&copy; 2026 <strong>JAMIA ABUL HASAN ALI NADWI</strong> (Rabbani Foundation Marul). <span data-i18n="allRightsReserved">All Rights Reserved.</span></div>
-        <div class="text-gold"><i class="fa-solid fa-shield-halved"></i> Commercial School Management ERP Frontend Prototype</div>
+        <div class="text-warning"><i class="fa-solid fa-shield-halved"></i> Institutional Islamic School ERP Prototype</div>
       </div>
     </div>
   </footer>
 
-  <!-- Floating Quick Demo Role Switcher Pill -->
+  <!-- Floating Quick Role Login Switcher (Placed cleanly on the bottom-LEFT side) -->
   <a href="pages/login.html" class="demo-role-badge-pill" title="Quick Demo Login Switcher">
     <i class="fa-solid fa-key text-warning"></i>
     <span>Quick Role Login</span>
   </a>
+
+  <!-- Floating Scroll-To-Top (Up Arrow) Button -->
+  <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Back to Top / اوپر جائیں" aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -461,7 +666,33 @@
 
   <script>
     AOS.init({ duration: 800, once: true });
+
+    // Fast Enquiry Form Handler
+    window.submitFastEnquiry = function() {
+      const name = document.getElementById('enqStudentName').value.trim();
+      const father = document.getElementById('enqFatherName').value.trim();
+      const grade = document.getElementById('enqClass').value;
+      const phone = document.getElementById('enqPhone').value.trim();
+
+      if (!name || !father || !grade || !phone) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Missing Fields',
+          text: 'Please fill in student name, father name, class, and mobile number.',
+          confirmButtonColor: '#064E3B'
+        });
+        return;
+      }
+
+      Swal.fire({
+        icon: 'success',
+        title: 'Enquiry Received!',
+        html: `<strong>Jazakallahu Khair!</strong><br>Admission enquiry for <strong>${name}</strong> (${grade}) has been recorded. Our admissions coordinator will contact you at <strong>${phone}</strong>.`,
+        confirmButtonColor: '#064E3B'
+      });
+
+      document.getElementById('fastEnquiryForm').reset();
+    };
   </script>
 </body>
 </html>
-

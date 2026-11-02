@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: 'Admission Application Received',
           html: `<p>Jazakallahu Khair! The application for <strong>${applicantName}</strong> (Male) for <strong>${appliedGrade}</strong> has been recorded in the demo system.</p>
                  <p class="text-muted small">Application Token: #ADM-${Math.floor(1000 + Math.random() * 9000)} (Demo Mode)</p>`,
-          confirmButtonColor: '#2563EB'
+          confirmButtonColor: '#064E3B'
         });
       } else {
         alert("Application submitted successfully for " + applicantName);
@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
         Swal.fire({
           icon: 'success',
           title: 'Message Sent (Demo)',
-          text: 'Thank you for contacting Syed Abul Hasan Ali Nadwi School. Our administrative office will get back to you shortly.',
-          confirmButtonColor: '#142B4A'
+          text: 'Thank you for contacting Jamia Abul Hasan Ali Nadwi. Our administrative office will get back to you shortly.',
+          confirmButtonColor: '#064E3B'
         });
       } else {
         alert("Thank you! Your message has been sent.");
@@ -65,7 +65,7 @@ function renderPublicNotices() {
         <h5 class="feature-title mb-2">${item.title}</h5>
         <p class="feature-desc">${item.content}</p>
         <div class="mt-auto">
-          <span class="badge-nadwi badge-blue"><i class="fa-solid fa-users me-1"></i>${item.audience}</span>
+          <span class="badge-nadwi badge-emerald"><i class="fa-solid fa-users me-1"></i>${item.audience}</span>
         </div>
       </div>
     </div>

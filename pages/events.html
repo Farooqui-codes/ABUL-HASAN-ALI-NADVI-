@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events &amp; Academic Calendar — SYED ABUL HASAN ALI NADWI</title>
+  <title>Events &amp; Activities — JAMIA ABUL HASAN ALI NADWI</title>
   
   <link rel="manifest" href="../manifest.json">
   <meta name="theme-color" content="#064E3B">
@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -27,14 +28,15 @@
     <nav class="navbar navbar-expand-lg py-2">
       <div class="container">
         <a class="navbar-brand-wrap" href="../index.html">
-          <img src="../assets/logo/official-logo.png" alt="Jamia Abul Hasan Ali Nadwi Logo" height="52" class="me-2">
+          <img src="../assets/logo/official-logo.png" alt="Jamia Abul Hasan Ali Nadwi Logo" height="50">
           <div class="brand-title-wrap">
-            <span class="brand-title-urdu" style="font-size: 1.05rem;">جامعہ ابوالحسن علی ندوی</span>
-            <span class="brand-title-en" style="font-size: 0.75rem;">JAMIA ABUL HASAN ALI NADWI</span>
+            <span class="brand-title-urdu">جامعہ ابوالحسن علی ندوی</span>
+            <span class="brand-title-en">JAMIA ABUL HASAN ALI NADWI</span>
+            <small class="brand-title-sub">RABBANI FOUNDATION MARUL</small>
           </div>
         </a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#publicNav">
-          <i class="fa-solid fa-bars fs-2 text-primary"></i>
+          <i class="fa-solid fa-bars fs-2 text-success"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="publicNav">
@@ -45,37 +47,53 @@
 
             <!-- About Us Dropdown -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle " href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="navAbout">
+              <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="navAbout">
                 About Us
               </a>
               <ul class="dropdown-menu animate-fade-in-down" aria-labelledby="aboutDropdown">
-                <li><a class="dropdown-item " href="about.html"><i class="fa-solid fa-school me-2"></i> About &amp; Philosophy</a></li>
-                <li><a class="dropdown-item " href="faculty.html"><i class="fa-solid fa-chalkboard-user me-2"></i> Faculty &amp; Asatizah</a></li>
-                <li><a class="dropdown-item " href="facilities.html"><i class="fa-solid fa-building me-2"></i> Campus &amp; Facilities</a></li>
+                <li><a class="dropdown-item" href="about.html"><i class="fa-solid fa-school text-success me-2"></i> About &amp; Philosophy</a></li>
+                <li><a class="dropdown-item" href="faculty.html"><i class="fa-solid fa-chalkboard-user text-success me-2"></i> Faculty &amp; Asatizah</a></li>
+                <li><a class="dropdown-item" href="facilities.html"><i class="fa-solid fa-building text-success me-2"></i> Campus &amp; Facilities</a></li>
+                <li><a class="dropdown-item active" href="events.html"><i class="fa-solid fa-calendar-days text-success me-2"></i> Events &amp; Activities</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link " href="academics.html" data-i18n="navAcademics">Academics</a>
+              <a class="nav-link" href="academics.html" data-i18n="navAcademics">Academics</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link " href="admissions.html" data-i18n="navAdmissions">Admissions</a>
+              <a class="nav-link" href="../index.html#announcements">Announcements</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link " href="contact.html" data-i18n="navContact">Contact</a>
+              <a class="nav-link" href="admissions.html" data-i18n="navAdmissions">Admissions</a>
             </li>
 
-            <!-- Controls: Language & Theme Side by Side in 1 Clean Row -->
-            <li class="nav-item ms-lg-3 my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" data-i18n="navContact">Contact</a>
+            </li>
+
+            <!-- Action CTA: Admissions -->
+            <li class="nav-item ms-lg-2 my-1 my-lg-0">
+              <a href="admissions.html" class="btn-header-admissions">
+                <i class="fa-solid fa-graduation-cap"></i> Apply 2026-27
+              </a>
+            </li>
+
+            <!-- Action CTA: Portal Access -->
+            <li class="nav-item ms-lg-1 my-1 my-lg-0">
+              <a href="login.html" class="btn-header-portal" title="ERP Portal Access">
+                <i class="fa-solid fa-arrow-right-to-bracket text-success"></i> Portal
+              </a>
+            </li>
+
+            <!-- Controls -->
+            <li class="nav-item ms-lg-2 my-2 my-lg-0">
               <div class="site-nav-controls">
-                <!-- Language Switcher -->
                 <button class="lang-toggle-btn" onclick="window.NadwiLang.toggle()" title="Switch Language / زبان تبدیل کریں">
                   <i class="fa-solid fa-globe"></i> <span id="langBtnText">اردو</span>
                 </button>
-
-                <!-- Dark / Light Theme Toggle -->
                 <button class="theme-toggle-btn" onclick="window.NadwiUI.toggleTheme()" title="Toggle Dark/Light Mode">
                   <i id="themeToggleIcon" class="fa-solid fa-moon"></i>
                 </button>
@@ -87,12 +105,12 @@
     </nav>
   </header>
 
-  <!-- Banner -->
-  <section class="py-5" style="background: linear-gradient(135deg, #142B4A 0%, #1E3A8A 100%); color: #FFF;">
+  <!-- Banner (Emerald & Gold) -->
+  <section class="py-5" style="background: linear-gradient(135deg, #022C22 0%, #064E3B 55%, #0B5D3B 100%); color: #FFF;">
     <div class="container text-center py-3">
-      <span class="badge-nadwi badge-gold mb-2">CAMPUS CALENDAR</span>
+      <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill mb-2">CAMPUS CALENDAR</span>
       <h1 class="display-5 fw-bold text-white mb-2" data-i18n="navEvents">Events &amp; Activities</h1>
-      <div class="font-urdu text-gold fs-4">تقاریب و تعلیمی کیلنڈر — سالانہ سرگرمیاں</div>
+      <div class="font-urdu text-warning fs-4">تقاریب و تعلیمی کیلنڈر — سالانہ سرگرمیاں</div>
     </div>
   </section>
 
@@ -100,74 +118,74 @@
   <section class="section-padding">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">UPCOMING GATHERINGS</span>
-        <h2 class="section-title">Academic &amp; Cultural Calendar</h2>
-        <p class="section-subtitle">Competitions, parent conferences, and commemorative Islamic events.</p>
+        <span class="section-tag">ANNUAL ACTIVITIES</span>
+        <h2 class="section-title">Enriching Co-Curricular Calendar</h2>
+        <p class="section-subtitle">Recitation contests, parent-teacher reviews, and character-building Islamic events for junior students.</p>
       </div>
 
       <div class="row g-4">
         <!-- Event 1 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card h-100">
+          <div class="curriculum-card">
             <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="stat-icon blue text-center" style="width: 60px; height: 60px;">
-                <span class="d-block fw-bold fs-4 leading-none">12</span>
-                <span class="small text-uppercase">Nov</span>
+              <div class="credibility-icon gold text-center" style="width: 55px; height: 55px;">
+                <span class="d-block fw-bold fs-5 leading-none">12</span>
+                <span class="small text-uppercase" style="font-size: 0.65rem;">Nov</span>
               </div>
               <div>
-                <span class="badge-nadwi badge-gold">Spiritual &amp; Literary</span>
-                <h5 class="fw-bold text-navy mb-0 mt-1">Seerat-un-Nabi (PBUH) Conference</h5>
+                <span class="badge-nadwi badge-gold">Qira'at &amp; Dua</span>
+                <h5 class="fw-bold mb-0 mt-1" style="color: var(--color-primary-dark);">Junior Nazira Competition</h5>
               </div>
             </div>
-            <p class="feature-desc">
-              Annual grand gathering featuring Arabic Qira'at recitations, Urdu eulogies, and guest lectures by esteemed scholars on the Prophetic character.
+            <p class="curriculum-desc">
+              Annual recitation gathering where primary boys demonstrate accurate Noorani Qaida Makharij, Tajweed fluency, and daily Masnoon Dua memorization before teachers and parents.
             </p>
             <div class="border-top pt-2 small text-muted">
-              <i class="fa-solid fa-location-dot me-1"></i> Grand Musalla Auditorium • 09:30 AM
+              <i class="fa-solid fa-location-dot me-1 text-success"></i> Campus Musalla • 09:30 AM
             </div>
           </div>
         </div>
 
         <!-- Event 2 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card h-100">
+          <div class="curriculum-card">
             <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="stat-icon gold text-center" style="width: 60px; height: 60px;">
-                <span class="d-block fw-bold fs-4 leading-none">15</span>
-                <span class="small text-uppercase">Nov</span>
+              <div class="credibility-icon text-center" style="width: 55px; height: 55px;">
+                <span class="d-block fw-bold fs-5 leading-none">20</span>
+                <span class="small text-uppercase" style="font-size: 0.65rem;">Nov</span>
               </div>
               <div>
-                <span class="badge-nadwi badge-blue">Assessments</span>
-                <h5 class="fw-bold text-navy mb-0 mt-1">Mid-Term Term Examination</h5>
+                <span class="badge-nadwi badge-emerald">Academics</span>
+                <h5 class="fw-bold mb-0 mt-1" style="color: var(--color-primary-dark);">Phonics &amp; Spelling Bee</h5>
               </div>
             </div>
-            <p class="feature-desc">
-              Comprehensive mid-session written and oral examinations across all grades, including Hifz assessment and modern science papers.
+            <p class="curriculum-desc">
+              Friendly interactive English phonics competition for Class 1 to 4, celebrating vocabulary enrichment, pronunciation clarity, and confident stage presentation.
             </p>
             <div class="border-top pt-2 small text-muted">
-              <i class="fa-solid fa-clock me-1"></i> Exam Blocks A &amp; B • 08:30 AM - 11:30 AM
+              <i class="fa-solid fa-location-dot me-1 text-success"></i> Junior Activity Hall • 10:00 AM
             </div>
           </div>
         </div>
 
         <!-- Event 3 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature-card h-100">
+          <div class="curriculum-card">
             <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="stat-icon green text-center" style="width: 60px; height: 60px;">
-                <span class="d-block fw-bold fs-4 leading-none">05</span>
-                <span class="small text-uppercase">Dec</span>
+              <div class="credibility-icon gold text-center" style="width: 55px; height: 55px;">
+                <span class="d-block fw-bold fs-5 leading-none">28</span>
+                <span class="small text-uppercase" style="font-size: 0.65rem;">Nov</span>
               </div>
               <div>
-                <span class="badge-nadwi badge-success">STEM &amp; Innovation</span>
-                <h5 class="fw-bold text-navy mb-0 mt-1">Annual Science &amp; Robotics Expo</h5>
+                <span class="badge-nadwi badge-gold">Parent Review</span>
+                <h5 class="fw-bold mb-0 mt-1" style="color: var(--color-primary-dark);">Term 1 Parent Consultation</h5>
               </div>
             </div>
-            <p class="feature-desc">
-              Live models of solar tracking systems, hydraulic cranes, and physics demonstrations conceptualized and built by male secondary students.
+            <p class="curriculum-desc">
+              One-on-one consultation with class incharge Asatizah reviewing child attendance, reading progress, and home Tarbiyah routines under Rabbani Foundation.
             </p>
             <div class="border-top pt-2 small text-muted">
-              <i class="fa-solid fa-location-dot me-1"></i> Science Hall Quadrangle • 10:00 AM
+              <i class="fa-solid fa-location-dot me-1 text-success"></i> Primary Classrooms • 08:30 AM – 01:00 PM
             </div>
           </div>
         </div>
@@ -177,11 +195,73 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container text-center">
-      <p class="mb-1">&copy; 2026 <strong>SYED ABUL HASAN ALI NADWI</strong>. <span data-i18n="allRightsReserved">All Rights Reserved.</span></p>
-      <small class="text-muted">Strict Islamic Boys School Demo Data Policy Compliant.</small>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <span class="urdu-name">جامعہ ابوالحسن علی ندوی</span>
+            <h4>JAMIA ABUL HASAN ALI NADWI</h4>
+            <div class="text-warning fw-bold small mb-2">UNDER RABBANI FOUNDATION MARUL</div>
+            <p class="footer-desc">
+              Dedicated Islamic early childhood and foundational primary institution catering to boys from <strong>Nursery, LKG, UKG to 4th Standard</strong>. Committed to building strong foundational Arabic, Tajweed, English literacy, and moral Tarbiyah.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="../index.html"><i class="fa-solid fa-chevron-right text-success small"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right text-success small"></i> About School</a></li>
+            <li><a href="academics.html"><i class="fa-solid fa-chevron-right text-success small"></i> Academics</a></li>
+            <li><a href="faculty.html"><i class="fa-solid fa-chevron-right text-success small"></i> Faculty</a></li>
+            <li><a href="facilities.html"><i class="fa-solid fa-chevron-right text-success small"></i> Facilities</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="footer-heading">Admissions &amp; Portals</h5>
+          <ul class="footer-links">
+            <li><a href="admissions.html"><i class="fa-solid fa-chevron-right text-success small"></i> Admissions 2026-27</a></li>
+            <li><a href="events.html"><i class="fa-solid fa-chevron-right text-success small"></i> School Events</a></li>
+            <li><a href="login.html?role=admin"><i class="fa-solid fa-lock text-success small"></i> Admin Portal</a></li>
+            <li><a href="login.html?role=teacher"><i class="fa-solid fa-book text-success small"></i> Teacher Portal</a></li>
+            <li><a href="login.html?role=parent"><i class="fa-solid fa-users text-success small"></i> Parent Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-heading">Marul Campus Office</h5>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Rabbani Foundation Complex, Marul Campus</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 98765 43210 (Demo Contact)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@jamianadwi.demo</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Mon - Sat: 8:00 AM - 2:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 <strong>JAMIA ABUL HASAN ALI NADWI</strong> (Rabbani Foundation Marul). All Rights Reserved.</div>
+        <div class="text-warning"><i class="fa-solid fa-shield-halved"></i> Institutional School Management ERP</div>
+      </div>
     </div>
   </footer>
+
+  <!-- Floating Scroll-To-Top Button -->
+  <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Back to Top / اوپر جائیں" aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -191,4 +271,3 @@
   <script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>
-

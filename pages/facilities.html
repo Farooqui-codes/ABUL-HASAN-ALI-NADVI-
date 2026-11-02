@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campus &amp; Facilities — SYED ABUL HASAN ALI NADWI</title>
+  <title>Campus &amp; Facilities — JAMIA ABUL HASAN ALI NADWI</title>
   
   <link rel="manifest" href="../manifest.json">
   <meta name="theme-color" content="#064E3B">
@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -27,14 +28,15 @@
     <nav class="navbar navbar-expand-lg py-2">
       <div class="container">
         <a class="navbar-brand-wrap" href="../index.html">
-          <img src="../assets/logo/official-logo.png" alt="Jamia Abul Hasan Ali Nadwi Logo" height="52" class="me-2">
+          <img src="../assets/logo/official-logo.png" alt="Jamia Abul Hasan Ali Nadwi Logo" height="50">
           <div class="brand-title-wrap">
-            <span class="brand-title-urdu" style="font-size: 1.05rem;">جامعہ ابوالحسن علی ندوی</span>
-            <span class="brand-title-en" style="font-size: 0.75rem;">JAMIA ABUL HASAN ALI NADWI</span>
+            <span class="brand-title-urdu">جامعہ ابوالحسن علی ندوی</span>
+            <span class="brand-title-en">JAMIA ABUL HASAN ALI NADWI</span>
+            <small class="brand-title-sub">RABBANI FOUNDATION MARUL</small>
           </div>
         </a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#publicNav">
-          <i class="fa-solid fa-bars fs-2 text-primary"></i>
+          <i class="fa-solid fa-bars fs-2 text-success"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="publicNav">
@@ -49,33 +51,49 @@
                 About Us
               </a>
               <ul class="dropdown-menu animate-fade-in-down" aria-labelledby="aboutDropdown">
-                <li><a class="dropdown-item " href="about.html"><i class="fa-solid fa-school me-2"></i> About &amp; Philosophy</a></li>
-                <li><a class="dropdown-item " href="faculty.html"><i class="fa-solid fa-chalkboard-user me-2"></i> Faculty &amp; Asatizah</a></li>
-                <li><a class="dropdown-item active" href="facilities.html"><i class="fa-solid fa-building me-2"></i> Campus &amp; Facilities</a></li>
+                <li><a class="dropdown-item" href="about.html"><i class="fa-solid fa-school text-success me-2"></i> About &amp; Philosophy</a></li>
+                <li><a class="dropdown-item" href="faculty.html"><i class="fa-solid fa-chalkboard-user text-success me-2"></i> Faculty &amp; Asatizah</a></li>
+                <li><a class="dropdown-item active" href="facilities.html"><i class="fa-solid fa-building text-success me-2"></i> Campus &amp; Facilities</a></li>
+                <li><a class="dropdown-item" href="events.html"><i class="fa-solid fa-calendar-days text-success me-2"></i> Events &amp; Activities</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link " href="academics.html" data-i18n="navAcademics">Academics</a>
+              <a class="nav-link" href="academics.html" data-i18n="navAcademics">Academics</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link " href="admissions.html" data-i18n="navAdmissions">Admissions</a>
+              <a class="nav-link" href="../index.html#announcements">Announcements</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link " href="contact.html" data-i18n="navContact">Contact</a>
+              <a class="nav-link" href="admissions.html" data-i18n="navAdmissions">Admissions</a>
             </li>
 
-            <!-- Controls: Language & Theme Side by Side in 1 Clean Row -->
-            <li class="nav-item ms-lg-3 my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" data-i18n="navContact">Contact</a>
+            </li>
+
+            <!-- Action CTA: Admissions -->
+            <li class="nav-item ms-lg-2 my-1 my-lg-0">
+              <a href="admissions.html" class="btn-header-admissions">
+                <i class="fa-solid fa-graduation-cap"></i> Apply 2026-27
+              </a>
+            </li>
+
+            <!-- Action CTA: Portal Access -->
+            <li class="nav-item ms-lg-1 my-1 my-lg-0">
+              <a href="login.html" class="btn-header-portal" title="ERP Portal Access">
+                <i class="fa-solid fa-arrow-right-to-bracket text-success"></i> Portal
+              </a>
+            </li>
+
+            <!-- Controls -->
+            <li class="nav-item ms-lg-2 my-2 my-lg-0">
               <div class="site-nav-controls">
-                <!-- Language Switcher -->
                 <button class="lang-toggle-btn" onclick="window.NadwiLang.toggle()" title="Switch Language / زبان تبدیل کریں">
                   <i class="fa-solid fa-globe"></i> <span id="langBtnText">اردو</span>
                 </button>
-
-                <!-- Dark / Light Theme Toggle -->
                 <button class="theme-toggle-btn" onclick="window.NadwiUI.toggleTheme()" title="Toggle Dark/Light Mode">
                   <i id="themeToggleIcon" class="fa-solid fa-moon"></i>
                 </button>
@@ -87,87 +105,99 @@
     </nav>
   </header>
 
-  <!-- Banner -->
-  <section class="py-5" style="background: linear-gradient(135deg, #142B4A 0%, #1E3A8A 100%); color: #FFF;">
+  <!-- Banner (Emerald & Gold) -->
+  <section class="py-5" style="background: linear-gradient(135deg, #022C22 0%, #064E3B 55%, #0B5D3B 100%); color: #FFF;">
     <div class="container text-center py-3">
-      <span class="badge-nadwi badge-gold mb-2">INFRASTRUCTURE &amp; CAMPUS</span>
+      <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill mb-2">CAMPUS &amp; LEARNING SPACES</span>
       <h1 class="display-5 fw-bold text-white mb-2" data-i18n="navFacilities">Campus Facilities</h1>
-      <div class="font-urdu text-gold fs-4">سہولیاتِ کیمپس — تعلیمی و تربیتی ماحول</div>
+      <div class="font-urdu text-warning fs-4">سہولیاتِ کیمپس — محفوظ تعلیمی و تربیتی ماحول</div>
     </div>
   </section>
 
   <!-- Facilities Details -->
   <section class="section-padding">
     <div class="container">
+      <!-- 1. Junior Maktabah -->
       <div class="row g-5 align-items-center mb-5">
         <div class="col-lg-6" data-aos="fade-right">
-          <span class="section-tag">CENTRAL RESEARCH FACILITY</span>
-          <h2 class="section-title">The Maktabah (Central Library)</h2>
+          <span class="section-tag">EARLY READING CULTURE</span>
+          <h2 class="section-title">Junior Islamic Library &amp; Reading Corner</h2>
           <p class="text-secondary">
-            Named after Hazrat Maulana Syed Abul Hasan Ali Nadwi, our library houses an exceptional collection of over 15,000 volumes across Quranic Tafseer, Hadith encyclopedias, Arabic grammar treatises, world history, mathematics, and contemporary science literature.
+            Carefully curated for junior boys (Nursery to 4th Standard), our reading corner features illustrated Sirah stories, color-coded Noorani Qaida primers, Arabic picture dictionaries, and engaging English phonics storybooks.
           </p>
-          <ul class="text-secondary small">
-            <li><i class="fa-solid fa-circle-check text-primary me-2"></i>Quiet reading halls with wooden Quran reading stands (Rehals).</li>
-            <li><i class="fa-solid fa-circle-check text-primary me-2"></i>Digital cataloging integrated into the ERP library module.</li>
-            <li><i class="fa-solid fa-circle-check text-primary me-2"></i>High-speed research terminals for senior students and faculty.</li>
+          <ul class="text-secondary small ps-3">
+            <li class="mb-1"><i class="fa-solid fa-circle-check text-success me-2"></i>Child-safe low shelving and quiet wooden reading tables.</li>
+            <li class="mb-1"><i class="fa-solid fa-circle-check text-success me-2"></i>Weekly storytelling circle bringing Prophetic virtues to life.</li>
+            <li><i class="fa-solid fa-circle-check text-success me-2"></i>Book lending recorded digitally via our school management ERP.</li>
           </ul>
         </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <img src="../assets/images/library-illustration.svg" alt="Central Library" class="img-fluid rounded shadow-lg">
+        <div class="col-lg-6 text-center" data-aos="fade-left">
+          <div class="p-3 bg-white rounded-4 shadow-sm border">
+            <img src="../assets/images/library-illustration.svg" alt="Junior Library" class="img-fluid rounded" style="max-height: 320px;">
+          </div>
         </div>
       </div>
 
+      <!-- 2. Campus Musalla -->
       <div class="row g-5 align-items-center mb-5 flex-lg-row-reverse">
         <div class="col-lg-6" data-aos="fade-left">
-          <span class="section-tag">SPIRITUAL HEART OF CAMPUS</span>
-          <h2 class="section-title">Grand Musalla &amp; Prayer Hall</h2>
+          <span class="section-tag">SPIRITUAL SANCTUARY</span>
+          <h2 class="section-title">Campus Musalla &amp; Daily Prayer Area</h2>
           <p class="text-secondary">
-            Spiritual development is the core of our institution. The centrally located Musalla accommodates 1,000 worshippers, fostering discipline through five daily congregational prayers led by Huffaz scholars.
+            Spiritual nurturing starts from childhood. Our clean campus Musalla allows young boys to learn practical Wudhu manners, align rows (Taswiyat-us-Sufoof), and perform Zuhr Salah in congregation under the loving guidance of their Asatizah.
           </p>
-          <ul class="text-secondary small">
-            <li><i class="fa-solid fa-circle-check text-success me-2"></i>Acoustically designed mihrab and dome architecture.</li>
-            <li><i class="fa-solid fa-circle-check text-success me-2"></i>Dedicated ablution (Wudu) areas with clean, continuous water supply.</li>
-            <li><i class="fa-solid fa-circle-check text-success me-2"></i>Daily evening spiritual reminder (Tazkeer) circles.</li>
+          <ul class="text-secondary small ps-3">
+            <li class="mb-1"><i class="fa-solid fa-circle-check text-success me-2"></i>Dedicated, clean ablution station tailored for young students.</li>
+            <li class="mb-1"><i class="fa-solid fa-circle-check text-success me-2"></i>Daily Sunnah Dua practice circles after congregational prayers.</li>
+            <li><i class="fa-solid fa-circle-check text-success me-2"></i>Instilling reverence and discipline for the House of Allah.</li>
           </ul>
         </div>
-        <div class="col-lg-6" data-aos="fade-right">
-          <img src="../assets/images/prayer-hall.svg" alt="Grand Musalla" class="img-fluid rounded shadow-lg">
+        <div class="col-lg-6 text-center" data-aos="fade-right">
+          <div class="p-3 bg-white rounded-4 shadow-sm border">
+            <img src="../assets/images/prayer-hall.svg" alt="Campus Musalla" class="img-fluid rounded" style="max-height: 320px;">
+          </div>
         </div>
       </div>
 
+      <!-- 3. Learning Activity & Computer Hall -->
       <div class="row g-5 align-items-center mb-5">
         <div class="col-lg-6" data-aos="fade-right">
-          <span class="section-tag">SCIENTIFIC EXPLORATION</span>
-          <h2 class="section-title">STEM &amp; Computer Laboratories</h2>
+          <span class="section-tag">MULTIMEDIA LEARNING</span>
+          <h2 class="section-title">Activity &amp; Computer Hall</h2>
           <p class="text-secondary">
-            Modern physics, chemistry, biology, and IT laboratories allow our boys to combine deep faith with rigorous empirical science. Safe workstations, digital microscopes, and high-spec desktop computers facilitate practical learning.
+            Equipped with safe, supervised educational multimedia tools to help children visualize phonics sounds, listen to authentic Qari recitations, and master basic keyboard and mouse orientation.
           </p>
-          <ul class="text-secondary small">
-            <li><i class="fa-solid fa-circle-check text-warning me-2"></i>Standardized safety apparatus and fume ventilation.</li>
-            <li><i class="fa-solid fa-circle-check text-warning me-2"></i>Python programming, web basics, and digital office productivity suites.</li>
-            <li><i class="fa-solid fa-circle-check text-warning me-2"></i>Annual inter-school science and innovation exhibition.</li>
+          <ul class="text-secondary small ps-3">
+            <li class="mb-1"><i class="fa-solid fa-circle-check text-success me-2"></i>Audio-visual Tajweed pronunciation aids with headphones.</li>
+            <li class="mb-1"><i class="fa-solid fa-circle-check text-success me-2"></i>Child-safe supervised educational mathematics software.</li>
+            <li><i class="fa-solid fa-circle-check text-success me-2"></i>Interactive smart screen for classroom storytelling sessions.</li>
           </ul>
         </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <img src="../assets/images/science-lab.svg" alt="Science Lab" class="img-fluid rounded shadow-lg">
+        <div class="col-lg-6 text-center" data-aos="fade-left">
+          <div class="p-3 bg-white rounded-4 shadow-sm border">
+            <img src="../assets/images/science-lab.svg" alt="Activity Hall" class="img-fluid rounded" style="max-height: 320px;">
+          </div>
         </div>
       </div>
 
+      <!-- 4. Supervised Campus Transport -->
       <div class="row g-5 align-items-center flex-lg-row-reverse">
         <div class="col-lg-6" data-aos="fade-left">
           <span class="section-tag">SAFE COMMUTE</span>
-          <h2 class="section-title">School Transport Fleet</h2>
+          <h2 class="section-title">Supervised Campus Transport</h2>
           <p class="text-secondary">
-            A dedicated fleet of well-maintained school buses and commuter vans traversing across major city routes, supervised by experienced male drivers and staff with verified records.
+            Rabbani Foundation operates safe, dedicated school vans serving Marul and neighboring residential areas, ensuring stress-free pickup and drop-off for our young students.
           </p>
-          <ul class="text-secondary small">
-            <li><i class="fa-solid fa-circle-check text-primary me-2"></i>Controlled routes with designated pickup and drop points.</li>
-            <li><i class="fa-solid fa-circle-check text-primary me-2"></i>Emergency first-aid kits on every vehicle.</li>
-            <li><i class="fa-solid fa-circle-check text-primary me-2"></i>Tracked under the ERP Transport Management Module.</li>
+          <ul class="text-secondary small ps-3">
+            <li class="mb-1"><i class="fa-solid fa-circle-check text-success me-2"></i>Verified drivers and attentive adult bus conductors.</li>
+            <li class="mb-1"><i class="fa-solid fa-circle-check text-success me-2"></i>Pre-planned routes covering Marul Central, Colony, and Main Road.</li>
+            <li><i class="fa-solid fa-circle-check text-success me-2"></i>Safety protocols ensuring children are handed directly to guardians.</li>
           </ul>
         </div>
-        <div class="col-lg-6" data-aos="fade-right">
-          <img src="../assets/images/transport-bus.svg" alt="Transport Bus" class="img-fluid rounded shadow-lg">
+        <div class="col-lg-6 text-center" data-aos="fade-right">
+          <div class="p-3 bg-white rounded-4 shadow-sm border">
+            <img src="../assets/images/transport-bus.svg" alt="Campus Transport" class="img-fluid rounded" style="max-height: 320px;">
+          </div>
         </div>
       </div>
     </div>
@@ -175,11 +205,73 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container text-center">
-      <p class="mb-1">&copy; 2026 <strong>SYED ABUL HASAN ALI NADWI</strong>. <span data-i18n="allRightsReserved">All Rights Reserved.</span></p>
-      <small class="text-muted">Strict Islamic Boys School Demo Data Policy Compliant.</small>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <span class="urdu-name">جامعہ ابوالحسن علی ندوی</span>
+            <h4>JAMIA ABUL HASAN ALI NADWI</h4>
+            <div class="text-warning fw-bold small mb-2">UNDER RABBANI FOUNDATION MARUL</div>
+            <p class="footer-desc">
+              Dedicated Islamic early childhood and foundational primary institution catering to boys from <strong>Nursery, LKG, UKG to 4th Standard</strong>. Committed to building strong foundational Arabic, Tajweed, English literacy, and moral Tarbiyah.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="../index.html"><i class="fa-solid fa-chevron-right text-success small"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right text-success small"></i> About School</a></li>
+            <li><a href="academics.html"><i class="fa-solid fa-chevron-right text-success small"></i> Academics</a></li>
+            <li><a href="faculty.html"><i class="fa-solid fa-chevron-right text-success small"></i> Faculty</a></li>
+            <li><a href="facilities.html"><i class="fa-solid fa-chevron-right text-success small"></i> Facilities</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="footer-heading">Admissions &amp; Portals</h5>
+          <ul class="footer-links">
+            <li><a href="admissions.html"><i class="fa-solid fa-chevron-right text-success small"></i> Admissions 2026-27</a></li>
+            <li><a href="events.html"><i class="fa-solid fa-chevron-right text-success small"></i> School Events</a></li>
+            <li><a href="login.html?role=admin"><i class="fa-solid fa-lock text-success small"></i> Admin Portal</a></li>
+            <li><a href="login.html?role=teacher"><i class="fa-solid fa-book text-success small"></i> Teacher Portal</a></li>
+            <li><a href="login.html?role=parent"><i class="fa-solid fa-users text-success small"></i> Parent Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-heading">Marul Campus Office</h5>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Rabbani Foundation Complex, Marul Campus</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 98765 43210 (Demo Contact)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@jamianadwi.demo</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Mon - Sat: 8:00 AM - 2:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 <strong>JAMIA ABUL HASAN ALI NADWI</strong> (Rabbani Foundation Marul). All Rights Reserved.</div>
+        <div class="text-warning"><i class="fa-solid fa-shield-halved"></i> Institutional School Management ERP</div>
+      </div>
     </div>
   </footer>
+
+  <!-- Floating Scroll-To-Top Button -->
+  <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Back to Top / اوپر جائیں" aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -189,4 +281,3 @@
   <script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>
-
