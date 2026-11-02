@@ -81,15 +81,19 @@ function setupModuleNavigation() {
 function renderAdminOverview() {
   const students = window.NadwiData.getStudents();
   const teachers = window.NadwiData.getTeachers();
+  const classes = window.NadwiData.getClasses();
   const fees = window.NadwiData.getFees();
 
+  // Grounded actual count from classes (Nursery to 4th Standard)
+  const totalEnrolled = classes.reduce((sum, c) => sum + (c.studentsCount || 0), 0) || students.length;
+
   const totalStudentsEl = document.getElementById("totalStudentsCount");
-  if (totalStudentsEl) totalStudentsEl.textContent = students.length * 70; // Scaled demo display
+  if (totalStudentsEl) totalStudentsEl.textContent = totalEnrolled;
 
   const totalTeachersEl = document.getElementById("totalTeachersCount");
-  if (totalTeachersEl) totalTeachersEl.textContent = teachers.length + 37;
+  if (totalTeachersEl) totalTeachersEl.textContent = teachers.length;
 
-  // Calculate fee sums
+  // Calculate actual verified fee sums
   let totalPaid = 0;
   let totalPending = 0;
   fees.forEach(f => {
@@ -98,10 +102,10 @@ function renderAdminOverview() {
   });
 
   const paidEl = document.getElementById("totalFeeCollected");
-  if (paidEl) paidEl.textContent = "₹" + (totalPaid + 320000).toLocaleString();
+  if (paidEl) paidEl.textContent = "₹" + totalPaid.toLocaleString();
 
   const pendingEl = document.getElementById("totalFeePending");
-  if (pendingEl) pendingEl.textContent = "₹" + (totalPending + 45000).toLocaleString();
+  if (pendingEl) pendingEl.textContent = "₹" + totalPending.toLocaleString();
 }
 
 // ==========================================
