@@ -4,7 +4,7 @@
  * fallback to cache when offline.
  */
 
-const CACHE_NAME = 'nadwi-erp-v6';
+const CACHE_NAME = 'nadwi-erp-v7';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

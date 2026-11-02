@@ -55,20 +55,44 @@ function renderPublicNotices() {
   if (!container || !window.NadwiData) return;
 
   const notices = window.NadwiData.getNotices();
-  container.innerHTML = notices.map(item => `
-    <div class="col-md-4 mb-4">
-      <div class="feature-card">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <span class="badge-nadwi badge-gold">${item.category}</span>
-          <small class="text-muted"><i class="fa-solid fa-calendar-days me-1"></i>${item.date}</small>
-        </div>
-        <h5 class="feature-title mb-2">${item.title}</h5>
-        <p class="feature-desc">${item.content}</p>
-        <div class="mt-auto">
-          <span class="badge-nadwi badge-emerald"><i class="fa-solid fa-users me-1"></i>${item.audience}</span>
+  container.innerHTML = notices.map((item, idx) => {
+    const catClass = (item.category || '').toLowerCase();
+    const catIcon = catClass.includes('admission') ? 'fa-graduation-cap' :
+                    catClass.includes('event') ? 'fa-trophy' : 'fa-book-open';
+
+    let displayDate = item.date;
+    try {
+      const d = new Date(item.date);
+      if (!isNaN(d.getTime())) {
+        displayDate = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      }
+    } catch(e) {}
+
+    return `
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="${idx * 100}">
+        <div class="announcement-card">
+          <div class="announcement-meta-top">
+            <span class="announcement-category-badge ${catClass}">
+              <i class="fa-solid ${catIcon} me-1"></i>${item.category}
+            </span>
+            <span class="announcement-date">
+              <i class="fa-regular fa-calendar-check"></i> ${displayDate}
+            </span>
+          </div>
+          <h4 class="announcement-title">${item.title}</h4>
+          <p class="announcement-desc">${item.content}</p>
+          <div class="announcement-footer">
+            <span class="announcement-audience">
+              <i class="fa-solid fa-users me-1"></i>${item.audience}
+            </span>
+            <a href="pages/events.html" class="announcement-read-link">
+              <span>View Notice</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 

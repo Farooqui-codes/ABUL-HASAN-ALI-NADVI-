@@ -510,6 +510,70 @@
   border-color: var(--color-border) !important;
 }
 
+/* Recent Announcements in Dark Mode */
+[data-theme="dark"] .announcements-section {
+  background: linear-gradient(180deg, #061A14 0%, #0B251D 100%) !important;
+  border-color: var(--color-border) !important;
+}
+
+[data-theme="dark"] .announcement-card {
+  background-color: var(--color-bg-card) !important;
+  border-color: var(--color-border) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .announcement-card:hover {
+  border-color: rgba(214, 168, 79, 0.45) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="dark"] .announcement-title {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .announcement-card:hover .announcement-title {
+  color: #34D399 !important;
+}
+
+[data-theme="dark"] .announcement-desc {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .announcement-date {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .announcement-footer {
+  border-top-color: var(--color-border) !important;
+}
+
+[data-theme="dark"] .announcement-audience {
+  background: rgba(52, 211, 153, 0.15) !important;
+  color: #34D399 !important;
+}
+
+[data-theme="dark"] .announcement-read-link {
+  color: #FDE68A !important;
+}
+
+[data-theme="dark"] .announcement-category-badge.admissions {
+  background: rgba(52, 211, 153, 0.18) !important;
+  color: #34D399 !important;
+  border-color: rgba(52, 211, 153, 0.3) !important;
+}
+
+[data-theme="dark"] .announcement-category-badge.events {
+  background: rgba(214, 168, 79, 0.22) !important;
+  color: #FDE68A !important;
+  border-color: rgba(214, 168, 79, 0.4) !important;
+}
+
+[data-theme="dark"] .announcement-category-badge.academics {
+  background: rgba(52, 211, 153, 0.18) !important;
+  color: #6EE7B7 !important;
+  border-color: rgba(52, 211, 153, 0.3) !important;
+}
+
 /* Behind the Code (Developers Section) in Dark Mode */
 [data-theme="dark"] .developers-section {
   background: linear-gradient(180deg, #061A14 0%, #0B251D 100%) !important;
